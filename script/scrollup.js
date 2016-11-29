@@ -1,25 +1,20 @@
-window.onload = function() { // после загрузки страницы
+window.onload = function() {
 
-	var scrollUp = document.getElementById('scrollup'); // найти элемент
+	var scrollUp = document.getElementById('scrollup');
 
-	// scrollUp.onmouseover = function() { // добавить прозрачность
-	// 	scrollUp.style.opacity=0.3;
-	// 	scrollUp.style.filter  = 'alpha(opacity=30)';
-	// };
-
-	// scrollUp.onmouseout = function() { //убрать прозрачность
-	// 	scrollUp.style.opacity = 0.5;
-	// 	scrollUp.style.filter  = 'alpha(opacity=50)';
-	// };
-
-	scrollUp.onclick = function() { //обработка клика
+	scrollUp.onclick = function() {
 		window.scrollTo(0,0);
+		setInterval(10);
+
 	};
 
-// show button
+	// scrollUp.onclick = function() {
+	// 	setInterval(function(){ window.scrollTo(0,0); }, 3000);
+	// }
 
-	window.onscroll = function () { // при скролле показывать и прятать блок
-		if ( window.pageYOffset > 0 ) {
+
+	window.onscroll = function () {
+		if ( window.pageYOffset > 500 ) {
 			scrollUp.style.display = 'block';
 		} else {
 			scrollUp.style.display = 'none';
