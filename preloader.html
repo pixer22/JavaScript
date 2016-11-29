@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Прелоадер</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<link rel="stylesheet" href="./css/menu.css">
+	<link rel="stylesheet" href="./css/preloader.css">
+    <script async defer src="./script/preloader.js"></script>
+  
+
+</head>
+<body>
+<nav role='navigation'>
+  <ul>
+    <li><a href="./index.html">Главная</a></li>
+    <li><a href="#">Домашнее задание</a>
+      <ul>
+        <li><a onclick="fclock()">Часы</a></li>
+        <li><a onclick="fclock1()">От 0 до бесконечности</a></li>
+        <li><a href="./scrollup.html">Кнопка вверх</a></li>
+        <li><a href="./preloader.html">Прелоадер</a></li>
+        <li><a href="./read.html">Режим чтения</a></li>
+        <li><a href="./clock2.html">Отсчет с кнопкой остановки</a></li>
+        <li><a href="./clock3.html">Таймер обратного отсчета</a></li>
+        <li><a href="./clock4.html">Слайдер с кнопкой старт</a></li>
+        <li><a href="./clock5.html">Текущий месяц словом</a></li>
+		  <li><a href="./reg.html">Регистрация/Авторизация</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
+<div id="hellopreloader">
+	<div id="hellopreloader_preload"></div>
+	
+
+<div class="head">
+<h3>Прелоадер</h3>
+</div>
+
+<script>
+
+function fclock() {
+    document.getElementById("clock").innerHTML = myclock();
+}
+</script>
+
+<p id="clock"></p>
+
+<script>
+
+function fclock1() {
+    document.getElementById("clock1").innerHTML = "<div id='wrapper'><p id='test'>0</p><input type='submit' onclick='myclock1()' value='Запустить таймер'></div>";
+}
+</script>
+
+<p id="clock1"></p>
+
+
+</div>
+
+</body>
+</html>
