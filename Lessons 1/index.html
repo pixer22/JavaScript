@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lessons 1</title>
+	<!--<script async defer src="./js/script.js"></script>-->
+	<!--<script async defer src="./js/script2.js"></script>-->
+		
+</head>
+<body>
+<script>
+	var userName = 'Misha',
+		userSurname = 'Lonin',
+		userAge = 32;
+		USER_STATUS = 'male';
+
+alert(userName + ' ' + userSurname + ' ' + userAge);
+
+	userName = prompt('Введите Ваше Имя:', 'Пример: Иван');
+	userSurname = prompt('Введите Вашу фамилию:', 'Пример: Иванов');
+	userAge = prompt('Введите Ваш Возраст:', ' ');
+
+	document.write('Добрый день ' + userName + ' ' + userSurname + '<br>');
+	
+	document.write('Вам ' + userAge + 'и Вы ' + USER_STATUS + '<br>');
+
+</script>
+</body>
+</html>

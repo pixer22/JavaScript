@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<h3>Регистрация</h3>
+<form>
+      <input id="login" type="text" class="form-control" placeholder="Ваш логин">
+      <input id="pass" type="pass" class="form-control" placeholder="Ваш пароль">
+      <input id="regbtn" name="submit" value="Send" type="submit" />
+
+      </form>
+
+<script>
+window.onload = function() {
+  console.info('Регистрация');
+var btn = document.getElementById('regbtn');
+btn.onclick = function() {
+    console.info('Сработал btn.onclick');
+var login,
+    pass;
+    appStore = window.localStorage;
+
+ var login = localStorage.setItem(login,pass);
+ var pass = localStorage.setItem(login,pass);
+//localStorage.setItem('pass','123456');
+
+//console.log(localStorage);
+
+//login = document.getElementById('login').value;
+//pass = document.getElementById('pass').value;
+
+
+if(login == appStore.login && pass == appStore.pass) {
+      
+       window.location.replace('./login.html');
+     } else{
+     alert('что то нетак');
+}
+}
+
+}
+
+</script>
+
+
+
+</body>
+</html>

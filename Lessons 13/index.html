@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>События</title>
+</head>
+<body class="body-container">
+    <div class="container"><!-- 2 -->
+        <p>Element 1</p>
+        <p>Element 2</p>
+        <p>Element 3</p>
+        <p>Element 4</p><!-- 1 Target-->
+    </div>
+
+    <script>
+        var container = window.document.querySelector('.container');
+        container.addEventListener('click', function () {console.log('Container - bubbling')}, false);
+        container.addEventListener('click', function () {console.log('Container - intercept')}, true);
+
+
+        container.lastElementChild.addEventListener('click', showEvent, false);
+
+        function showEvent(event) {
+            console.log('Target');
+            console.log(event);
+            event.stopPropagation();
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

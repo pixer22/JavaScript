@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons 4 - Циклы</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<script async defer src="./js/script.js"></script>
+</head>
+<body>
+	<!--<script>
+
+		var arr = [2,4,true,12, 'test'];
+
+		console.log(arr.length);
+
+
+	</script>-->
+
+		<!--<script>
+
+			var arr = new Array(10,20,30,true);
+
+			console.log(arr);
+			console.log(arr.length);
+
+
+		</script>-->
+
+		<!--<script>
+			
+			var arr = [10,20,30,true];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			arr.length = 3;
+			console.log(arr);
+			console.log(arr.length);
+		</script>-->
+			
+
+			<!--<script>
+//разряженный массив			
+			var arr = [10,20,30,,,,,,true];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			console.log(2 in arr);
+			console.log(arr[2]);
+
+			console.log(3 in arr);
+			console.log(arr[3]);
+
+		</script>-->
+
+		<!--<script>
+			//удаление из массива
+		var arr = [10,20,30,true];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			delete arr[1];
+			console.log(arr);
+			console.log(arr.length);
+
+		</script>-->
+
+		<!--<script>
+			//удаление из массива
+		var arr = [10,20,30];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			arr.push(40,50); //Удаляет последний элемент из массива и возвращает его:
+
+			console.log(arr);
+			console.log(arr.length);
+
+			arr.pop(); //Удаляет и Добавляет элемент в конец массива:
+
+			console.log(arr);
+			console.log(arr.length);
+
+		</script>-->
+
+			<!--<script>
+			//Добавление в массив
+		var arr = [10,20,30];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			arr.unshift(40,50); //Добавляет элемент в начало массива:
+
+			console.log(arr);
+			console.log(arr.length);
+
+			var firstElem = arr.shift();
+			arr.firstElem = firstElem;
+
+			console.log(arr);
+			console.log(arr.length);
+			console.log('Первый', arr.firstElem);
+
+			</script>-->
+
+			<!--<script>
+				//slice
+				var arr = [10,20,30,40,50,60];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			var newArr = arr.slice(2,4); //метод slice() возвращает поверхностную копию части массива в новый объект массива.
+
+			console.log(newArr);
+
+			console.log(arr);
+			console.log(arr.length);
+
+			
+
+			//console.log(arr);
+			//console.log(arr.length);
+			//console.log('Первый', arr.firstElem);
+			</script>-->
+
+			<!--<script>
+					//splice
+				var arr = [10,20,30,40,50,60];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			var newArr = arr.splice(2,2); //Метод splice() изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
+
+			console.log(newArr);
+
+			console.log(arr);
+			console.log(arr.length);
+
+			
+
+			//console.log(arr);
+			//console.log(arr.length);
+			//console.log('Первый', arr.firstElem);
+			</script>-->
+
+			<!--<script>
+
+			//indexOf()
+
+				var arr = [10,20,'test',40,50,60];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			var newElem = arr.indexOf('test'); //Метод indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
+
+			console.log('Индекс: ', newElem);
+
+			console.log(arr);
+			console.log(arr.length);
+
+			
+
+			//console.log(arr);
+			//console.log(arr.length);
+			//console.log('Первый', arr.firstElem);
+			</script>-->
+
+			<!--<script>
+
+			//join()
+
+				var arr = [10,20,'test',40,'test',60];
+
+			console.log(arr);
+			console.log(arr.length);
+
+			var newElem = arr.join(''); //Метод join() объединяет все элементы массива в строку.
+
+			console.log('Результат: ', newElem);
+
+			console.log(arr);
+			console.log(arr.length);
+
+			
+
+			//console.log(arr);
+			//console.log(arr.length);
+			//console.log('Первый', arr.firstElem);
+			</script>-->
+
+			<!--<script>
+
+			//concat()
+
+				var arr = [10,20,'test',40,'test',60];
+
+				console.log(arr);
+				console.log(arr.length);
+
+				var newElem = arr.concat([4, 6],[69,76]); //Метод concat() возвращает новый массив, состоящий из массива, на котором он был вызван, соединённого с другими массивами и/или значениями, переданными в качестве аргументов.
+
+				console.log('Результат: ', newElem);
+
+				console.log(arr);
+				console.log(arr.length);
+
+			
+
+			//console.log(arr);
+			//console.log(arr.length);
+			//console.log('Первый', arr.firstElem);
+			</script>-->
+
+			<!--<script>
+
+			//sort()
+
+				var arr = [10,20,'test',40,'test',60];
+
+				console.log(arr);
+				console.log(arr.length);
+
+				var newElem = arr.concat(' - '); //Метод sort() на месте сортирует элементы массива и возвращает отсортированный массив. Сортировка не обязательно устойчива (англ.). Порядок cортировки по умолчанию соответствует порядку кодовых точек Unicode.
+
+				console.log('Результат: ', newElem);
+
+				console.log(arr);
+				console.log(arr.length);
+
+			
+
+			
+			</script>-->
+
+					<!--<script>
+
+			//reverse()
+
+				var arr = [10,20,'test',40,'test',60];
+
+				console.log(arr);
+				console.log(arr.length);
+
+				var newElem = arr.reverse(' - '); //Метод reverse() на месте обращает порядок следования элементов массива. Первый элемент массива становится последним, а последний — первым.
+
+				console.log('Результат: ', newElem);
+
+				console.log(arr);
+				console.log(arr.length);
+
+			
+
+			
+			</script>-->
+
+			<!--<script>
+			//foreach() запомнить
+				var arr = [1,2,4,5,6];
+				sum = 0;
+
+				console.log(arr);
+				console.log(arr.length);
+
+				arr.forEach(function(element, index, array){
+					if(element % 2 == 0) {
+						sum += element;
+					}
+				}); //Метод forEach() выполняет указанную функцию один раз для каждого элемента в массиве.
+
+				
+				console.warn(sum);
+				console.log(arr);
+				console.log(arr.length);
+
+			
+
+		
+
+
+
+			</script>-->
+
+					<!--<script>
+			//filter() запомнить
+				var arr = [1,2,22,4,55,6],
+				sum = 0;
+
+				console.log(arr);
+				console.log(arr.length);
+
+				var filteredArr = arr.filter(function(element){
+					return element > 20;
+					
+				}); //Метод filter() создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции.
+
+				console.log(filteredArr);
+				console.log(arr);
+				console.log(arr.length);
+
+						</script>-->
+
+				<!--<script>
+			//map() запомнить
+				var arr = [1,2,22,4,55,6],
+				sum = 0;
+
+				console.log(arr);
+				console.log(arr.length);
+
+				var filteredArr = arr.map(function(element){
+					return element * 2;
+					
+				}); //Метод map() создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
+
+				console.log(filteredArr);
+				console.log(arr);
+				console.log(arr.length);
+
+						</script>-->
+
+
+						<!--<script>
+							var arr = [1,2,-9,4,5,-6,3],
+							sum = 0;
+
+							arr.forEach(function(element,index,array){
+								if(element < 0){
+									sum += element;
+								}
+							});
+							console.log(sum);
+
+							
+						</script>-->
+
+						<script>
+							//многомерный массив
+
+							var arr = [
+
+							   0 1 2 3
+
+							0 [0,3,6,9],
+							1 [1,4,7,10],
+							2 [2,5,8,11],
+							3 [5,10,15,20]
+							];
+
+							console.log(arr[2][2]);
+
+						</script>
+
+</body>
+</html>

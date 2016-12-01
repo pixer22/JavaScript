@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons 4 - Циклы</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<script async defer src="./js/script.js"></script>
+</head>
+<body>
+
+
+	<!--<script>
+	
+		var arr = [2,4,6,8,10];
+			
+
+
+		for (var i = 0, sum = 0; i < arr.length; i++) {
+
+			sum += arr[i];
+		}
+
+		console.log('Сумма: ', sum);
+
+
+
+		//while (i < 2) {
+
+
+		//	sum += arr[i];
+		//	i++;
+		//}
+
+		//do {
+		//	sum += arr[i];
+		//	i++;
+		//}	while (i > 2);
+
+		
+
+	</script>-->
+
+<!--<script>
+	
+		var arr = [2,5,3,9,8,-10,16,18,22,24,77];
+			
+
+
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] > 0 &&  arr[i] <= 40 && arr[i] % 2 == 0){
+				console.log(arr[i]);	
+			}
+
+		}
+		
+		
+
+		
+
+
+
+		//while (i < 2) {
+
+
+		//	sum += arr[i];
+		//	i++;
+		//}
+
+		//do {
+		//	sum += arr[i];
+		//	i++;
+		//}	while (i > 2);
+
+		
+
+	</script>-->
+
+<!--<script>
+		var sum;
+		console.time();
+		for(var i = 0; i < 10000000; i++) {
+
+			sum += i;
+		}
+
+		console.timeEnd();
+</script>-->
+
+		<script>
+	
+		var sum;
+		console.time();
+
+		timeOut: for(var i = 0; i < 6; i++) {
+
+			for (var j = 0; j < 3; j++){
+
+				if (i > j) {
+					break timeOut;
+				}
+			}
+			
+			console.log('Элемент timeOut: ', i);
+		}
+
+		console.timeEnd();
+		
+
+		</script>
+</body>
+</html>

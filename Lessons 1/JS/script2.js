@@ -1,0 +1,1 @@
+alert('Это файл script2.js');

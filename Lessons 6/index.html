@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons 6 - Функции</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<script async defer src="./js/script.js"></script>
+</head>
+<body>
+	<script>
+	//калькулятор 2-х чисел с фунциями (+, -, *, /)
+	//заводим переменные
+		var num1,
+			operator,
+			num2,
+			sum;
+
+	//ввыводим на экран пользователю
+		num1 = +prompt('Введите первое число','');
+
+		// валидация данных - проверка правильности ввода
+		do {
+			operator = prompt('Введите требуюмую операцию','+,-,*,/');
+		// Пока не удовлетворяется условие повторять
+		// } while (!(operator == '+' || operator == '-' || operator == '*' || operator == '/'));
+		 	} while (operator != '+' && operator != '-' && operator != '*' && operator != '/' && operator != ' +');
+		
+		num2 = +prompt('Введите второе число','');
+
+		//смотрим лог
+		console.log(num1 + ' ' + operator + ' ' + num2);
+
+		sum = calculate(num1, operator, num2);
+		alert('Ваш результат = ' + sum);
+
+
+
+		function calculate(val1, oper, val2) {
+			//var sum = val1 + val2;
+
+			switch(oper) {
+			case '+':
+				return sum(val1, val2);
+			case '-':
+				return difference(val1, val2);
+			case '*':
+				return product(val1, val2);
+			case '/':
+				return division(val1, val2);
+			//case ' +':
+			//	return sum(val1, val2);
+			default:
+				return 'Невалидные данные';
+			}
+			
+			}
+			//return sum;
+		
+
+		function sum(a,b) { return a + b};
+		function difference(a,b) {return a - b};
+		function product(a,b) {return a * b};
+		function division(a,b) {return a / b};
+
+
+
+	</script>
+
+	<script>
+				// var sum = 10;
+		// console.log('#1 -Глобальная переменная ', sum);
+
+		// test1();
+
+		// function test1() {
+		// 	var sum = 20;
+		// 	console.log('#2 -Переменная 1-го порядка ', sum);
+
+		// 	test2();
+
+		// 	function test2() {
+		// 		sum = 30;
+		// 		console.log('#3 -Переменная 2-го порядка ', sum);
+		// 	}
+		// }
+		// console.log('#4 -Глобальная переменная ', sum);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons 7 - Функции</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<script async defer src="./js/script.js"></script>
+</head>
+<body>
+	<script>
+	// //калькулятор 2-х чисел с фунциями (+, -, *, /)
+	// //заводим переменные
+	// 	var userInput,
+	// 		operator,			
+	// 		sum;
+
+	// 	userInput = prompt('Введите массив чисел разделеных запятой!','');
+		
+	// 	do {
+	// 		operator = prompt('Введите требуюмую операцию','+,-,*,/');
+	// 	// Пока не удовлетворяется условие повторять
+	// 	} while (operator != '+' && operator != '-' && operator != '*' && operator != '/' && operator != ' +');
+		
+		
+
+	// 	//смотрим лог
+	// 	console.log(userInput + ' ' + operator);
+
+	// 	userInput = userInput.split(',');
+
+	// 	sum = calculate(userInput, operator);
+	// 	alert('Ваш результат = ' + sum);
+
+
+
+	// 	function calculate(arr, oper) {
+			
+
+	// 		switch(oper) {
+	// 		case '+':
+	// 			return sum(arr);
+	// 		case '-':
+	// 			return difference(arr);
+	// 		case '*':
+	// 			return product(arr);
+	// 		case '/':
+	// 			return division(arr);
+	// 		default:
+	// 			return 'Невалидные данные';
+	// 		}
+			
+	// 		}
+			
+		
+
+	// 	function sum(arr) {
+	// 		var res = arr.shift();
+	// 		for(var i = 0; i < arr.length; i++){
+	// 			res += Number(arr[i]);
+	// 		}
+	// 		return res;
+	// 	};
+
+	// 	function difference(arr) {
+	// 		var res = arr.shift();
+	// 		for(var i = 0; i < arr.length; i++){
+	// 			res -= Number(arr[i]);
+	// 		}
+	// 		return res;
+	// 	};
+
+	// 	function product(arr) {
+	// 		var res = arr.shift();
+	// 		for(var i = 0; i < arr.length; i++){
+	// 			res *= Number(arr[i]);
+	// 		}
+	// 		return res;
+	// 	};
+
+	// 	function division(arr) {
+	// 		var res = arr.shift();
+	// 		for(var i = 0; i < arr.length; i++){
+	// 			res /= Number(arr[i]);
+	// 		}
+	// 		return res;
+	// 	};
+
+
+
+	</script>
+
+	<script>
+		
+		// var ttt = 10;
+		// console.log('#1 ', ttt);
+
+		// first(100);
+
+		// function first(ttt){
+			
+
+		// 	ttt = 20;
+		// console.log('#2 ', ttt);
+
+		// second();
+
+		// function second() {
+		// 	var ttt = 30;
+		// 	console.log('#3 ', ttt);
+		// 	}
+		// }
+
+		// console.log('#4 ', ttt);
+
+		// // console.log(pow(2, 3));
+		// // console.log(rPow(2, 3));
+
+		// // function pow(x, n) {
+		// // 	var sum = x;
+		// // 	for(var i = 0; i < n-1; i++){
+		// // 		sum *= x;
+		// // 	}
+		// // 	return sum;
+		// // }
+		// // //Рекурсия
+		// // function rPow(x, n){
+
+		// // 	if (n > 1) {
+		// // 		return x * rPow(x, n-1);
+		// // 	}
+		// // 	return x;
+		// // }
+
+
+	</script>
+
+	<script>
+	//Псевдомассив
+		// first(10,'Misha',[2,4],66,77);
+
+		// function first(val1,val2,val3){
+
+		// 	var obj = {
+		// 		name : 'Misha',
+		// 		surname : 'Lonin'
+		// 	}
+
+		// 	for (var i = 0; i < obj.length; i++){
+		// 		console.log('obj #' + i, obj[i]);
+		// 	}
+			
+		// 	//Лучше этот вариант(посчитать сумму в дз)
+		// 	for (key in obj){
+		// 		console.log('obj #' + key, obj[key]);
+		// 	}
+
+		
+		// }
+	</script>
+
+	<script>
+		//Замыкание
+		var Count = 0;
+
+function count() {
+    return ++Count;
+}
+
+console.log( count() ); 
+console.log( count() );
+console.log( count() );
+console.log( count() );
+console.log( count() );
+console.log( count() ); 
+ 
+
+
+	</script>
+	
+
+</body>
+</html>

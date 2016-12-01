@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons 3 if, else</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+	<script async defer src="./js/script.js"></script>
+	
+		
+</head>
+<body>
+<!-- пример if -->
+	<!--<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('Ведите логин: ', '');
+
+		if (debug){
+			console.log('Пользователь ввел: ' + userLogin);
+		}
+		if (userLogin) {
+			alert('Добро пожаловать ' + userLogin + '!');
+		}
+	</script>-->
+
+<!-- пример if else -->
+		<!--<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('Ведите логин: ', '');
+
+		if (debug){
+			console.log('Пользователь ввел: ' + userLogin);
+		}
+		if (userLogin) {
+
+			alert('Добро пожаловать ' + userLogin + '!');
+		} else {
+			if (userLogin == null) {
+				alert('Вход отменен');
+			} else {
+				alert('Логин не может состоять из пустой строки');
+			}
+			
+		}
+	</script>-->
+
+<!-- пример if else if else -->
+		<!--<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('Ведите логин: ', '');
+
+		if (debug){
+			console.log('Пользователь ввел: ' + userLogin);
+		}
+		if (userLogin) {
+			
+			alert('Добро пожаловать ' + userLogin + '!');
+		} else if (userLogin == null) {
+
+				alert('Вход отменен');
+			} else {
+
+				alert('Логин не может состоять из пустой строки');
+			}
+			
+		
+	</script>-->
+
+			<!--<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('Ведите логин: ', '');
+
+		if (debug){
+			console.log('Пользователь ввел: ' + userLogin);
+		}
+		if (userLogin) {
+			
+			alert('Добро пожаловать ' + userLogin + '!');
+		} else if (userLogin == null) {
+
+				alert('Вход отменен');
+			} else {
+
+				alert('Логин не может состоять из пустой строки');
+			}
+			
+		
+	</script>-->
+	
+		
+			<!--<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('АВТОРИЗАЦИЯ: ', '');
+
+			if (userLogin == 'admin'){
+				var pass = prompt('Ведите пароль');
+					
+					if (userLogin == null) {
+					alert('Вход отменен');
+			}
+				if(pass == '12345'){
+					alert('Добро Пожаловать' + ' ' + userLogin)
+				}
+				
+			}
+		
+
+		
+		
+	</script>-->
+				<script>
+		var userLogin,
+		debug = true;
+
+		userLogin = prompt('АВТОРИЗАЦИЯ: ', '');
+
+			if (userLogin == 'admin'){
+				var pass = prompt('Ведите пароль');
+					
+					if (userLogin == null) {
+					alert('Вход отменен');
+			}
+				if(pass == '12345'){
+					alert('Добро Пожаловать' + ' ' + userLogin)
+				}
+				
+			}
+		switch(userLogin) {
+		case 'Admin':
+			alert('Добро пожаловать ' + userLogin + '!');
+			break;
+		case 'Boy':
+			alert('Добро пожаловать ' + userLogin + '!');
+			break;
+		case 'Girl':
+			alert('Добро пожаловать ' + userLogin + '!');
+			break;
+		case '':
+			alert('Пустая строка недопустима');
+			break;
+		default:
+			alert('Неверный логин');
+		}
+
+		
+		
+	</script>
+
+	
+
+</body>
+</html>
