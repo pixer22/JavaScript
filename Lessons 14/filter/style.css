@@ -1,0 +1,6 @@
+#first-message,
+#second-message,
+#third-message{
+    color:red;
+    visibility: hidden;
+}
