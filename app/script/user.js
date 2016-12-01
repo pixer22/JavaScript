@@ -1,6 +1,6 @@
 var user = {
-	name: 'Viktor Khapus',
-	age: 32
+    name: 'Viktor Khapus',
+    age: 32
 };
 
 var ajax = new XMLHttpRequest();

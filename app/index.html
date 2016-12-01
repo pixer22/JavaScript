@@ -7,18 +7,27 @@
 	<link rel="stylesheet" href="./css/menu.css">
 	<link rel="stylesheet" href="./css/preloader.css">
   <script async defer src="./script/clock.js"></script>
-  <script async defer src="./script/clock1.js"></script>
+  <!--<script async defer src="./script/clock1.js"></script>
+  <script async defer src="./script/user.js"></script>-->
   
   
 
 </head>
 <body>
 <nav role='navigation'>
+    <div id="home">
+
+        <div id="test">
+            <div id="test1">
+                <p>Hello</p>
+            </div>
+        </div>
+    </div>
   <ul>
     <li><a href="./index.html">Главная</a></li>
     <li><a href="#">Домашнее задание</a>
       <ul>
-        <li><a onclick="fclock()">Часы</a></li>
+        <li id="clock12"><a>Часы</a></li>
         <li><a onclick="fclock1()">От 0 до бесконечности</a></li>
         <li><a href="./scrollup.html">Кнопка вверх</a></li>
         <li><a href="./preloader.html">Прелоадер</a></li>
@@ -42,12 +51,12 @@
 
 <script>
 
-function fclock() {
-    document.getElementById("clock").innerHTML = myclock();
-}
+//function fclock() {
+//    document.getElementById("clock").innerHTML = myclock();
+//}
 </script>
 
-<p id="clock"></p>
+<p id="clock11"></p>
 
 <script>
 

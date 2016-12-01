@@ -24,34 +24,6 @@ window.onload = function() {
 				document.getElementById('login-error').innerHTML = '';
 			},2000);
 		}
+}
+	};
 
-
-		
-
-	// var intID = setInterval(function(){
-	// 	console.info('setInterval: Прошло 3 секунды');
-	// },3000);
-
-	// setTimeout(function(){
-	// 	clearInterval(intID);
-	// },9100);
-
-}	
-	}
-	//ТАЙМЕРЫ
-
-	// //вызов действия единожды (секунды в 1000 = 1сек)
-	// setTimeout(function(){
-	// 	console.info('setTimeout: Прошло 3 секунды');
-	// },3000);
-
-	//вызов действия по интервалу с повторение через 3 сек
-	// setInterval(function(){
-	// 	console.info('setInterval: Прошло 3 секунды');
-	// },3000);
-
-		//WEB STORAGE//
-
-		//LocalStorage
-
-		//SessionStorage

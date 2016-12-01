@@ -25,7 +25,7 @@ window.onload = function() {
 		alert(error);
 
 			
-	}	
+	};
 	function $(str){
 		return document.getElementById(str);
 
@@ -37,4 +37,4 @@ window.onload = function() {
 		return ('Ошибка ввода данных');
 	}
 	}
-	}
+	};
