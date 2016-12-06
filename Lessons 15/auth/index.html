@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+//        var obj = [{
+//            name: 'Misha',
+//            login: 'Misha',
+//            pass: '123456',
+//            age: 32
+//        },{
+//            name: 'Ivan',
+//            login: 'ivan',
+//            pass: '123456',
+//            age: 12
+//        },{
+//            name: 'Admin',
+//            login: 'admin',
+//            pass: '123456',
+//            age: 33
+//        }];
+//
+//        var str = JSON.stringify(obj);
+//
+//        console.log('str', str);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './auth.json', true);
+        xhr.send(null);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var obj = JSON.parse(xhr.responseText);
+                console.log('obj', obj);
+            }
+
+        };
+
+
+
+    </script>
+
+</body>
+</html>
