@@ -4,7 +4,7 @@ var user = {
 };
 
 var ajax = new XMLHttpRequest();
-ajax.open("GET", "./templates/template.html", false);
+ajax.open("GET", "./templates/template.html", true);
 ajax.send();
 
 console.log('ajax', ajax);
