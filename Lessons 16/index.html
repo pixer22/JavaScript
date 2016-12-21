@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        var obj = {
+            name: 'Viktor',
+            age: 24
+
+        };
+        var obj2 = {};
+
+        for (key in obj) {
+            obj2[key] = obj[key];
+        }
+
+        obj2.surname = 'Ivanov';
+
+        console.log('Object 1 -', obj);
+        console.log('Object 2 -', obj2);
+
+    </script>
+</body>
+</html>
