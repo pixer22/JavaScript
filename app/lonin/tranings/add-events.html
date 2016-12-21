@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="body-container">
+    <div class="container"> <!-- 2 -->
+        <p>Element 1</p>
+        <p>Element 2</p>
+        <p>Element 3</p>
+        <p>Element 4</p> <!--1 - Target -->
+    </div>
+
+    <script>
+        var container = window.document.querySelector('.container');
+        container.addEventListener('click', function () {
+            console.log('Container - bubbling');
+            console.log(event.target);
+        }, false);
+
+//        container.addEventListener('click', function (event) {
+//            console.log('Container - intercept');
+//            console.log(event.target);
+//        }, true);
+
+        container.lastElementChild.addEventListener('click', showEvent, false);
+
+        function showEvent(event) {
+            console.log('Target');
+            console.log(event.target);
+            //event.stopPropagation();
+        }
+    </script>
+</body>
+</html>

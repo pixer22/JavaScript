@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>First Element</p>
+        <p>Second Element</p>
+        <p>Last Element</p>
+    </div>
+    <script>
+        var elem = window.document.getElementById('container');
+        console.log('elem', elem);
+        elem.addEventListener('click', function(event) {console.log('container', event.target)}, false);
+
+        console.log('elem.lastElementChild', elem.lastElementChild);
+        elem.lastElementChild.addEventListener('click', eventListener, false);
+
+        function eventListener(event) {
+            console.log('element');
+            event.stopPropagation();
+        }
+
+    </script>
+</body>
+</html>

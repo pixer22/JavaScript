@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.css">
+</head>
+<body>
+<div id = "for_templates"></div>
+<script>
+
+    getJSON(function(articles) {
+        let content ='';
+
+        for (let i=0; i < articles.length; i++) {
+            const article = articles[i];
+
+            getTemplate(article, idName, function(pastContent) {
+                content += eval(`\`${pastContent}\``);
+                window.document.getElementById("for_templates").innerHTML = content;
+            });
+        }
+    });
+
+
+    function getTemplate(article, callback) {
+        var template = new XMLHttpRequest();
+        template.open("GET","./template.html", true);
+        template.send();
+
+        template.onreadystatechange = function () {
+            if (template.readyState == 4 && template.status == 200) {
+                callback(template.responseText);
+            }
+        }
+    }
+
+    function getJSON(callback) {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './articles.json', true);
+        xhr.send(null);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var articles = JSON.parse(xhr.responseText);
+                callback(articles);
+            }
+        };
+    }
+</script>
+</body>
+</html>
