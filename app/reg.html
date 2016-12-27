@@ -4,9 +4,10 @@
 	<title>Регистрация</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <script async defer src="./script/reg.js"></script>
+
   <!--<script async defer src="./script/clock.js"></script>-->
   <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/style.css">
 	<style type="text/css">
     body {
       background-color: #DADADA;
@@ -66,8 +67,10 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input id="reg" type="text" name="text" placeholder="login">
+            <input id="reg" data-allowed-chars="qwertyuiopasdfghjklzxcvbnm" data-id="first-message" type="text" name="text" placeholder="Логин">
+            <span id="first-message">Только буквы!</span>
           </div>
+          <script src="./script/filter.js"></script>
         </div>
         <div class="field">
           <div class="ui left icon input">
@@ -77,14 +80,15 @@
         </div>
         <div id="reg-btn" class="ui fluid large teal submit button">Registration</div>
       <p id="login-error" style="color:red;"></p>
+        <script src="./script/reg.js"></script>
+
+
       </div>
 
       </form>
 
   </div>
 </div>
-
-
 
 </body>
 </html>

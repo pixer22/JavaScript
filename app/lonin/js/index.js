@@ -4,8 +4,8 @@ window.onload = function() {
     }
 
     var user = {
-        name: 'Michael Lonin',
-        age: 32
+        name: 'Viktor Khapus',
+        age: 33
     };
 
     var ajax = new XMLHttpRequest();

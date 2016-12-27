@@ -4,3 +4,10 @@ body {
 	font-size: 15px;
 	color: #333; 
 }
+
+#first-message,
+#second-message,
+#third-message{
+	color:red;
+	visibility: hidden;
+}

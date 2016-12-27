@@ -1,29 +1,49 @@
 window.onload = function() {
-	console.info('Авторизация');
+	var AjaxService = ajaxService();
 
-	var btn = document.getElementById('login-btn');
+	var btn = window.document.getElementById('login-btn');
 
 	btn.onclick = function() {
-		console.info('Сработал btn.onclick');
-
 		var login,
-			pass,
-			appStore = window.localStorage;
+			pass;
 
 		login = document.getElementById('login').value;
 		pass = document.getElementById('login-pass').value;
 
-		if(login == appStore.login && pass == appStore.pass) {
-			alert('Успешно');
-			window.location.replace('./index.html');
-		} else {
-			document.getElementById('login-error').innerHTML = 'Данные неверны';
+		AjaxService.getJSON(function(auth) {
+			auth.status = false;
+			for(var i = 0; i < auth.length; i++) {
+				if(login == auth[i].login && pass == auth[i].pass) {
+					auth.status = true;
+					window.sessionStorage.setItem('auth', true);
+					window.location.replace('index.html');
+				}
+			}
+			if (!auth.status) {
+				document.getElementById('login-error').innerHTML = 'Неверные данные!';
+				setTimeout(function(){
+					document.getElementById('login-error').innerHTML = ''
+				}, 3000);
+			}
+		});
 
 
-			setTimeout(function(){
-				document.getElementById('login-error').innerHTML = '';
-			},2000);
-		}
-}
+
+		// AjaxService.getJSON(function (auth) {
+		// 	auth.status = false;
+		// 	for(var i = 0; i < auth.length; i++) {
+		// 		if(login == auth[i].login && pass == auth[i].pass) {
+		// 			auth.status = true;
+		// 			window.sessionStorage.setItem('auth', true);
+		// 			window.location.replace('index.html');
+		// 		}
+		// 	}
+		// 	if (!auth.status) {
+		// 		document.getElementById('login-error').innerHTML = 'Неверные данные!';
+		// 		setTimeout(function(){
+		// 			document.getElementById('login-error').innerHTML = ''
+		// 		}, 3000);
+		// 	}
+		// });
 	};
-
+};
