@@ -1,0 +1,636 @@
+@font-face {
+    font-family: 'XeniaBoldCyrillic';
+    src: url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.eot');
+    src: url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.eot') format('embedded-opentype'),
+         url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.woff2') format('woff2'),
+         url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.woff') format('woff'),
+         url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.ttf') format('truetype'),
+         url('/upload/pizza_od_ua/fonts/XeniaBoldCyrillic.svg#XeniaBoldCyrillic') format('svg');
+}
+@font-face {
+    font-family: 'XeniaCondensedCyrillic';
+    src: url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.eot');
+    src: url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.eot') format('embedded-opentype'),
+         url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.woff2') format('woff2'),
+         url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.woff') format('woff'),
+         url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.ttf') format('truetype'),
+         url('/upload/pizza_od_ua/fonts/XeniaCondensedCyrillic.svg#XeniaCondensedCyrillic') format('svg');
+}
+
+.autoCallback {
+    display: none;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-30 {
+    margin: -1px 0 0 9px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-35 {
+    margin: -5px 0 0 9px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul,
+#products_content .products_box .hidden_filter .sause-selector ul {
+    margin-left: 0;
+}
+.pizza-label {
+    width: 68px;
+}
+.pizza-banner {
+    background: #a31824;
+    margin: 0 0 40px;
+    padding: 0;	
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+}
+.pizza-banner .tblPizza-td {
+    border-right: 1px solid #bc2a37;
+    border-left: 0;
+    float: left;
+    width: 33.3%;
+    height: 190px;
+    padding: 24px 0 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.pizza-banner .tblPizza-td:nth-child(2) {
+    background: #ad1c28;
+    border-left: 1px solid #94101c;
+    border-right: 1px solid #bd2a36;
+}
+.pizza-banner .tblPizza-td:last-child {
+    background: #b7202c;
+    border-radius: 0 7px 7px 0;
+    border-left: 1px solid #a21622;
+}
+.pizza-banner .pizza-banner-title {
+    text-indent: 0;
+    width: 100%;
+    background: 0;
+    margin: 0 0 17px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'XeniaCondensedCyrillic';
+}
+.pizza-banner .pizza-banner-itm:hover {
+    opacity: 0.8;
+}
+.pizza-banner .pizza-banner-itm-title{
+    font-weight: normal;
+    color: #f7a800;
+}
+.pizza-banner .pizza-banner-itm-txt {
+    border-bottom: 1px dashed #f7a800;
+}
+.i-dough {
+    background-image: url(http://pizza.od.ua/upload/pizza_od_ua/images/pizza-info-img.png);
+}
+.i-americano {
+    background-position: -240px -400px;
+}
+.i-italiano {
+    background-position: -400px -400px;
+}
+
+.menu-tabs {
+    background: #331d17;
+    border-radius: 9px;
+}
+.menu-tabs a {
+    float: left;
+    padding: 7px 0 0 !important;
+    margin: 0 30px;
+    margin-bottom: 5px;
+    padding: 0 16px;
+    color: #f7a800;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px !important;
+    text-decoration: none;
+    border-bottom: 1px dashed #f7a800;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.menu-tabs a:hover {
+    border-bottom: none;
+    color: #ffffff;
+}
+.menu-tabs a.active {
+    padding: 7px 18px !important;
+    margin-bottom: 0;
+    margin: 0 !important;
+}
+
+#products_content .products_box .hidden_filter {
+    padding: 30px 40px 0;
+    width: 225px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li {
+    background: url(http://pizza.od.ua/upload/pizza_od_ua/images/catalog-icons.png) 0 0 no-repeat;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-25 {
+    height: 38px;
+    width: 35px;
+    background-position: -86px -67px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-25.active, 
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-25:hover {
+    background-position: -86px -116px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-30 {
+    background-position: -45px -68px;
+    width: 41px;
+    height: 47px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-30.active, 
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-30:hover {
+    background-position: -45px -117px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-35 {
+    background-position: 0 -68px;
+    width: 45px;
+    height: 49px;
+}
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-35.active, 
+#products_content .products_box .hidden_filter .diameter-selector ul li.d-35:hover {
+    background-position: 0 -117px;
+}
+@media(max-width: 768px) {
+	.filter_row .ingridients { 
+	    position: relative;
+	    float: right;
+	    width: 211px;
+	    height: 36px;
+	}
+	.filter_row .ingridients .label {
+	    -webkit-box-shadow: inset 0 1px 8px 0 rgba(0,0,0,0.4);
+	    box-shadow: inset 0 1px 8px 0 rgba(0,0,0,0.4);
+	    border-radius: 9px;
+	    height: 34px;
+	    line-height: 38px;
+	    background-position: 198px 15px;
+	}
+}
+#scroll {
+    background: none;
+}
+#scroll li {
+    display: block;
+    height: 25px;
+    padding: 0 5px 0 5px;
+    background: #fff;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    font-size: 11px;
+    line-height: 25px;
+}
+#scroll li:hover {
+    color: #fff;
+    background: #118bdb;
+}
+#scroll li span {
+    position: relative;
+    top: 6px;
+}
+#scroll li span em {
+    background: #ffffff;
+}
+
+.filter_row {
+    position: relative;
+}
+.ingridients-wrapper {
+    border-radius: 9px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    box-sizing: border-box;
+}
+.ingridients-wrapper.wrap-active {
+    background: #ffffff;
+    padding: 10px;
+    height: 300px;
+}
+.ingridients-wrapper.wrap-active .ingridients .label {
+    box-shadow: none;
+    border: none;
+    background-color: #dadada;
+}
+.ingridients {
+    float: none;
+}
+.ingridients-wrapper.wrap-active #scroll {
+   border: none;
+   box-shadow: none;
+   top: 40px !important;
+}
+
+.search_filter {
+    display: none;
+}
+
+#products_content .products_box {
+    height: 450px;
+}
+#products_content .products_box table tr td {
+    padding: 19px 18px 18px;
+}
+
+@media (max-width: 640px) {
+    .bx_ordercart .grid-cl_1-2 { 
+        width: 100%; 
+    }
+    .bx_ordercart .order-itm-bonus {
+        margin-bottom: 10px;
+    }
+    .bx_ordercart .orange-btn.order-to-continue {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 766px) {
+    .pizza-banner {
+        display: none;
+    }
+}
+
+@media(max-width: 960px) {
+    .order-inline-box {
+        display: block;
+        margin-left: 0 !important;
+        margin-top: 10px;
+        width: 100% !important;
+    }
+    .order-select-phone {
+        width: 100%;
+    }
+    .pizza-banner .tblPizza-td {
+        width: 100%;
+    }
+    .menu-tabs {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .menu-tabs .nav-itm	{
+        display: block;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+	padding: 5px 0;
+        margin: 0;
+    }
+    #products_content .products_box .hidden_filter {
+        width: 100%;
+        height: 262px;
+        box-sizing: border-box;
+    }
+    #products_content .products_box table {
+        margin: 0 auto;
+    }
+    .filter_row {
+        padding-top: 45px;
+        margin-top: 10px;
+    }
+    .ingridients-wrapper {
+        top: 0;
+        width: 100%;
+    }
+    .ingridients-wrapper .ingridients {
+        width: 100%;
+        margin-right: 0;
+    }
+    .ingridients-wrapper .ingridients .label {
+        width: 100%;
+        box-sizing: border-box;
+        background-position: 98% 14px;
+    }
+    .ingridients-wrapper .ingridients #scroll {
+        width: 96%;
+    }
+    .hidden_filter .pizza_form {
+        width: 240px;
+        margin: 0 auto;
+    }
+    #basket_items_list {
+        position: inherit;
+    }
+    .mini-cart-wrap {
+        position: fixed !important;
+    }
+    .profile-tracker {
+        height: 200px;
+    }
+    .profile-tracker-adopted,
+    .profile-tracker-preparing,
+    .profile-tracker-assembled,
+    .profile-tracker-delivering,
+    .profile-tracker-delivered {
+        background-size: 108px;
+        width: 108px
+    }
+    .profile-tracker-adopted {
+        height: 70px;
+        left: 25px;
+        top: 35px;
+    }
+    .profile-tracker-preparing {
+        height: 106px;
+        top: 10px;
+        left: 170px;
+        
+    }
+    .profile-tracker-assembled {
+        height: 91px;
+        top: 25px;
+        left: 305px;
+    }
+    .profile-tracker-delivering {
+        height: 75px;
+        top: 40px;
+        left: 440px;
+    }
+    .profile-tracker-delivered {
+        height: 60px;
+        top: 55px;
+        left: 590px;
+    }
+    .profile-bigphone-phone {
+        font-size: 26px;
+    }
+    .profile-clockdown-ttext {
+        margin-top: 0;
+    }
+    .iv-embed, .iv-i {
+        width: 100% !important;
+        height: 430px !important;
+    }
+}
+@media (max-width: 530px) {
+    .order-table0 td,
+    #basket_items td {
+        display: block !important;
+    }
+    #basket_items td {
+        border-radius: 0;
+        text-align: center;
+        box-sizing: border-box;	
+    }
+    #basket_items td .order-itm-photo {
+        margin: 0 auto;
+    }
+    .order-bottom {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .order-table0 td {
+        text-align: center !important;
+    }
+    .price, .control,
+    #basket_items td {
+        width: 100% !important;
+    }
+    .bonus-img {
+        width: 100%;
+        height: 100%;
+    }
+    .bonus-top {
+        font-size: 20px;
+    }
+    .bonus-steps {
+        width: 100%;
+        padding-right: 0;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .bonus-img_right {
+        margin-left: 0;
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+    .bonus-whatthis {
+        font-size: 25px;
+    }
+    .grid_bonus .grid-cl_1-4,
+    .grid_bonus .grid-cl_1-3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .order-table tbody td:last-child {
+        border-radius: none;
+    }
+    .bx-touch .bx_ordercart .bx_ordercart_order_table_container table tbody tr td {
+        display: table-cell;
+        padding: 1% 2%;
+    }
+    .order-itm-count {
+        display: block;
+        margin: 0 auto;
+    }
+    .ta_r {
+        text-align: left;
+        width: 100%;
+    }
+    .order-box-inner {
+        padding: 5px;
+    }
+    .order-paid-sublist {
+        padding: 0 0 0 10px;
+    }
+    .order-inline-box .user_description {
+        width: 100%;
+    }
+    .profile-trackinfo {
+        padding: 15px 0 0;
+    }
+    .profile-tracking {
+        padding: 10px 15px 20px;
+    }
+    .grid_tracking .grid-cl_1-2 {
+        width: 100%;
+        padding-right: 0 !important;
+        padding: 10px;
+        text-align: center;
+    }
+    .profile-track-txt {
+        font-size: 11px;
+        width: 70px !important;
+        left: -29px !important;
+    }
+    .profile-track {
+        left: 20px;
+        right: 20px;
+    }
+    .profile-bigphone-phone {
+        font-size: 25px;
+    }
+    .profile-tracker-adopted,
+    .profile-tracker-preparing,
+    .profile-tracker-assembled,
+    .profile-tracker-delivering,
+    .profile-tracker-delivered {
+        background-size: 58px;
+        width: 58px;
+        display: none;
+    }
+    .profile-tracker-adopted {
+        height: 38px;
+        left: -12px;
+        top: 35px;
+    }
+    .profile-tracker-preparing {
+        height: 59px;
+        top: 25px;
+        left: 60px;
+        
+    }
+    .profile-tracker-assembled {
+        height: 49px;
+        top: 25px;
+        left: 130px;
+    }
+    .profile-tracker-delivering {
+        height: 41px;
+        top: 40px;
+        left: 202px;
+    }
+    .profile-tracker-delivered {
+        height: 32px;
+        top: 43px;
+        left: 276px;
+    }
+    .profile-tracker {
+        height: 100px;
+    }
+    .profile-tracking-title {
+        font-size: 36px;
+    }
+    .iv-embed, .iv-i {
+        height: 179px !important;
+    }
+    .profile-clockdown {
+        height: 140px;
+    }
+    .rating-wrap {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .rating-question {
+        text-align: center;
+        font-size: 30px;
+    }
+    .rating-tc {
+        margin-bottom: 20px;
+    }
+    .box_rating {
+        text-align: center;
+    }
+    .box-side_rating {
+        width: 100%;
+        float: none;
+        padding-right: 0;
+    }
+    .profile-bigphone-title,
+    .profile-bigpizza-title {
+        font-size: 18px;
+    }
+    .profile-service,
+    .profile-service-link {
+        display: none;
+    }
+    .profile-clockdown-ttext {
+        font-size: 54px;
+    }
+    .rateit .rateit-range {
+        transform: scale(0.7);
+    }
+    .rating-txt:before {
+        background: url(PizzaOdUa_Rating_m.png) no-repeat 0 0;
+        width: 51px;
+        height: 51px;
+    }
+    .rating-lbl.normal .rating-txt:before {
+        background-position: -52px 0;
+    }
+    .rating-lbl.good .rating-txt:before {
+        background-position: -102px 0;
+    }
+    .rating-lbl.bad:hover .rating-txt:before, 
+    .rating-lbl.bad .rating-radio:checked+.rating-txt:before {
+        background-position: 0 -52px;
+    }
+    .rating-lbl.normal:hover .rating-txt:before, 
+    .rating-lbl.normal .rating-radio:checked+.rating-txt:before {
+        background-position: -52px -52px;
+    }
+    .rating-lbl.good:hover .rating-txt:before, 
+    .rating-lbl.good .rating-radio:checked+.rating-txt:before {
+        background-position: -103px -52px;
+    }
+    .orderFlexTab-itm {
+        font-size: 0;
+    }
+    .orderFlexTab a:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 30px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .orderFlexTab a[href="/personal/"]:before {
+        content: "\f007";
+    }
+    .orderFlexTab a[href="/personal/profiles/"]:before {
+        content: "\f124";
+    }
+    .orderFlexTab a[href="/personal/favorites/"]:before {
+        content: "\f004";
+    }
+    .orderFlexTab a[href="/personal/order/"]:before {
+        content: "\f291";
+    }
+    .orderFlexTab a[href="/personal/tracking/"]:before {
+        content: "\f06e";
+    }
+    .orderFlexTab-wrap form {
+        padding-right: 0 !important;
+    }
+}
+@media (max-width: 960px) {
+   body .ingridients-wrapper {
+       overflow: hidden;
+       width: 100%;
+
+   }
+   .filter_row .ingridients .label {
+       box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.4);
+       border-radius: 1px;  
+       font-size: 1rem;           
+   }
+   #scroll li {
+       font-size: 0.9rem;
+   }
+   #scroll li:first-child {
+       font-size:0.8rem;
+       margin-top:-22px;
+   }
+   #scroll li span em b {
+       width: 12px;
+       height: 12px;
+   }
+   #scroll li span em {
+       width: 14px;
+       height: 14px;
+   }
+   .ingridients-wrapper {
+       border-radius: 0;
+        
+   }
+}

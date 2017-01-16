@@ -1,0 +1,122 @@
+/* jshint multistr: true */
+!function(e){if("function"==typeof define&&define.amd,1)if("object"==typeof exports,1){var t=window.bgcCookies,n=window.bgcCookies=e()
+n.noConflict=function(){return window.bgcCookies=t,n}}else module.exports=e()
+else define(e)}(function(){function e(){for(var e=0,t={};e<arguments.length;e++){var n=arguments[e]
+for(var a in n)t[a]=n[a]}return t}function t(n){function a(t,i,r){var s
+if("undefined"!=typeof document){if(arguments.length>1){if(r=e({path:"/"},a.defaults,r),"number"==typeof r.expires){var o=new Date
+o.setMilliseconds(o.getMilliseconds()+864e5*r.expires),r.expires=o}try{s=JSON.stringify(i),/^[\{\[]/.test(s)&&(i=s)}catch(l){}return i=n.write?n.write(i,t):encodeURIComponent(String(i)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),t=encodeURIComponent(String(t)),t=t.replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent),t=t.replace(/[\(\)]/g,escape),document.cookie=[t,"=",i,r.expires?"; expires="+r.expires.toUTCString():"",r.path?"; path="+r.path:"",r.domain?"; domain="+r.domain:"",r.secure?"; secure":""].join("")}t||(s={})
+for(var c=document.cookie?document.cookie.split("; "):[],u=/(%[0-9A-Z]{2})+/g,m=0;m<c.length;m++){var d=c[m].split("="),p=d.slice(1).join("=")
+'"'===p.charAt(0)&&(p=p.slice(1,-1))
+try{var g=d[0].replace(u,decodeURIComponent)
+if(p=n.read?n.read(p,g):n(p,g)||p.replace(u,decodeURIComponent),this.json)try{p=JSON.parse(p)}catch(l){}if(t===g){s=p
+break}t||(s[g]=p)}catch(l){}}return s}}return a.set=a,a.get=function(e){return a(e)},a.getJSON=function(){return a.apply({json:!0},[].slice.call(arguments))},a.defaults={},a.remove=function(t,n){a(t,"",e(n,{expires:-1}))},a.withConverter=t,a}return t(function(){})}),function(e,t,n){function a(e,t,n){e="object"==typeof e?e:{},e.url=e.url||window.location.toString(),e.type="POST"===e.type?e.type:"GET",e.timeout=1e3*(e.timeout>0?parseInt(e.timeout):5),e.async=e.async===!1?e.async:!0,e.headers="object"==typeof e.headers?e.headers:{},e.dataType=-1!==["json","text"].indexOf(e.dataType)?e.dataType:"text"
+var a,i=r(),s=null
+if("object"==typeof e.data){var o=binotelJqMini.param(e.data)
+"GET"===e.type&&""!==o?e.url=(e.url+"&"+o).replace(/[&?]{1,2}/,"?"):"POST"===e.type&&""!==o&&(e.headers["Content-Type"]||(e.headers["Content-Type"]="application/x-www-form-urlencoded"),s=o)}i.onreadystatechange=function(){if(4==i.readyState)if(clearTimeout(a),200==i.status)if("json"==e.dataType)try{t(JSON.parse(i.responseText))}catch(r){n(i,"parsererror")}else"text"==e.dataType&&t(i.responseText)
+else n(i,i.statusText)},i.open(e.type,e.url,e.async)
+for(headerName in e.headers)i.setRequestHeader(headerName,e.headers[headerName])
+e.timeout>0&&(a=setTimeout(function(){i.onreadystatechange=function(){},i.abort(),n(i,"timeout")},e.timeout)),i.send(s)}function r(){try{return new XMLHttpRequest}catch(e){}try{return new ActiveXObject("Msxml3.XMLHTTP")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.6.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.3.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP")}catch(e){}try{return new ActiveXObject("Microsoft.XMLHTTP")}catch(e){}return null}!function(e){"use strict"
+var t=-1,n={onVisible:function(e){var t=n.isSupported()
+if(!t||!n.hidden())return e(),t
+var a=n.change(function(t,i){n.hidden()||(n.unbind(a),e())})
+return a},change:function(e){if(!n.isSupported())return!1
+t+=1
+var a=t
+return n._callbacks[a]=e,n._listen(),a},unbind:function(e){delete n._callbacks[e]},afterPrerendering:function(e){var t=n.isSupported(),a="prerender"
+if(!t||a!=n.state())return e(),t
+var i=n.change(function(t,r){a!=r&&(n.unbind(i),e())})
+return i},hidden:function(){return!(!n._doc.hidden&&!n._doc.webkitHidden)},state:function(){return n._doc.visibilityState||n._doc.webkitVisibilityState||"visible"},isSupported:function(){return!(!n._doc.visibilityState&&!n._doc.webkitVisibilityState)},_doc:document||{},_callbacks:{},_change:function(e){var t=n.state()
+for(var a in n._callbacks)n._callbacks[a].call(n._doc,e,t)},_listen:function(){if(!n._init){var e="visibilitychange"
+n._doc.webkitVisibilityState&&(e="webkit"+e)
+var t=function(){n._change.apply(n,arguments)}
+n._doc.addEventListener?n._doc.addEventListener(e,t):n._doc.attachEvent(e,t),n._init=!0}}}
+"undefined"!=typeof module&&module.exports,e.bgcVisibility=n}(this),function(e){"use strict"
+var t=-1,n=function(n){return n.every=function(e,a,i){n._time(),i||(i=a,a=null),t+=1
+var r=t
+return n._timers[r]={visible:e,hidden:a,callback:i},n._run(r,!1),n.isSupported()&&n._listen(),r},n.stop=function(e){return n._timers[e]?(n._stop(e),delete n._timers[e],!0):!1},n._timers={},n._time=function(){n._timed||(n._timed=!0,n._wasHidden=n.hidden(),n.change(function(){n._stopRun(),n._wasHidden=n.hidden()}))},n._run=function(t,a){var i,r=n._timers[t]
+if(n.hidden()){if(null===r.hidden)return
+i=r.hidden}else i=r.visible
+var s=function(){r.last=new Date,r.callback.call(e)}
+if(a){var o=new Date,l=o-r.last
+i>l?r.delay=setTimeout(function(){s(),r.id=setInterval(s,i)},i-l):(s(),r.id=setInterval(s,i))}else r.id=setInterval(s,i)},n._stop=function(e){var t=n._timers[e]
+clearInterval(t.id),clearTimeout(t.delay),delete t.id,delete t.delay},n._stopRun=function(e){var t=n.hidden(),a=n._wasHidden
+if(t&&!a||!t&&a)for(var i in n._timers)n._stop(i),n._run(i,!t)},n}
+"undefined"!=typeof module&&module.exports,n(e.bgcVisibility)}(window),!function(e){function t(){var e=arguments[0],n=t.cache
+return n[e]&&n.hasOwnProperty(e)||(n[e]=t.parse(e)),t.format.call(null,n[e],arguments)}function n(e){return"number"==typeof e?"number":"string"==typeof e?"string":Object.prototype.toString.call(e).slice(8,-1).toLowerCase()}function a(e,t){return t>=0&&7>=t&&s[e]?s[e][t]:Array(t+1).join(e)}var i={not_string:/[^s]/,not_bool:/[^t]/,not_type:/[^T]/,not_primitive:/[^v]/,number:/[diefg]/,numeric_arg:/bcdiefguxX/,json:/[j]/,not_json:/[^j]/,text:/^[^\x25]+/,modulo:/^\x25{2}/,placeholder:/^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-gijostTuvxX])/,key:/^([a-z_][a-z_\d]*)/i,key_access:/^\.([a-z_][a-z_\d]*)/i,index_access:/^\[(\d+)\]/,sign:/^[\+\-]/}
+t.format=function(e,r){var s,o,l,c,u,m,d,p=1,g=e.length,f="",h=[],y=!0,b=""
+for(o=0;g>o;o++)if(f=n(e[o]),"string"===f)h[h.length]=e[o]
+else if("array"===f){if(c=e[o],c[2])for(s=r[p],l=0;l<c[2].length;l++){if(!s.hasOwnProperty(c[2][l]))throw new Error(t('[sprintf] property "%s" does not exist',c[2][l]))
+s=s[c[2][l]]}else s=c[1]?r[c[1]]:r[p++]
+if(i.not_type.test(c[8])&&i.not_primitive.test(c[8])&&"function"==n(s)&&(s=s()),i.numeric_arg.test(c[8])&&"number"!=n(s)&&isNaN(s))throw new TypeError(t("[sprintf] expecting number but found %s",n(s)))
+switch(i.number.test(c[8])&&(y=s>=0),c[8]){case"b":s=parseInt(s,10).toString(2)
+break
+case"c":s=String.fromCharCode(parseInt(s,10))
+break
+case"d":case"i":s=parseInt(s,10)
+break
+case"j":s=JSON.stringify(s,null,c[6]?parseInt(c[6]):0)
+break
+case"e":s=c[7]?parseFloat(s).toExponential(c[7]):parseFloat(s).toExponential()
+break
+case"f":s=c[7]?parseFloat(s).toFixed(c[7]):parseFloat(s)
+break
+case"g":s=c[7]?parseFloat(s).toPrecision(c[7]):parseFloat(s)
+break
+case"o":s=s.toString(8)
+break
+case"s":s=String(s),s=c[7]?s.substring(0,c[7]):s
+break
+case"t":s=String(!!s),s=c[7]?s.substring(0,c[7]):s
+break
+case"T":s=n(s),s=c[7]?s.substring(0,c[7]):s
+break
+case"u":s=parseInt(s,10)>>>0
+break
+case"v":s=s.valueOf(),s=c[7]?s.substring(0,c[7]):s
+break
+case"x":s=parseInt(s,10).toString(16)
+break
+case"X":s=parseInt(s,10).toString(16).toUpperCase()}i.json.test(c[8])?h[h.length]=s:(!i.number.test(c[8])||y&&!c[3]?b="":(b=y?"+":"-",s=s.toString().replace(i.sign,"")),m=c[4]?"0"===c[4]?"0":c[4].charAt(1):" ",d=c[6]-(b+s).length,u=c[6]&&d>0?a(m,d):"",h[h.length]=c[5]?b+s+u:"0"===m?b+u+s:u+b+s)}return h.join("")},t.cache={},t.parse=function(e){for(var t=e,n=[],a=[],r=0;t;){if(null!==(n=i.text.exec(t)))a[a.length]=n[0]
+else if(null!==(n=i.modulo.exec(t)))a[a.length]="%"
+else{if(null===(n=i.placeholder.exec(t)))throw new SyntaxError("[sprintf] unexpected placeholder")
+if(n[2]){r|=1
+var s=[],o=n[2],l=[]
+if(null===(l=i.key.exec(o)))throw new SyntaxError("[sprintf] failed to parse named argument key")
+for(s[s.length]=l[1];""!==(o=o.substring(l[0].length));)if(null!==(l=i.key_access.exec(o)))s[s.length]=l[1]
+else{if(null===(l=i.index_access.exec(o)))throw new SyntaxError("[sprintf] failed to parse named argument key")
+s[s.length]=l[1]}n[2]=s}else r|=2
+if(3===r)throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
+a[a.length]=n}t=t.substring(n[0].length)}return a}
+var r=function(e,n,a){return a=(n||[]).slice(0),a.splice(0,0,e),t.apply(null,a)},s={0:["","0","00","000","0000","00000","000000","0000000"]," ":[""," ","  ","   ","    ","     ","      ","       "],_:["","_","__","___","____","_____","______","_______"]}
+"undefined"!=typeof exports,e.sprintf=t,e.vsprintf=r,"function"==typeof define&&define.amd&&!1&&define(function(){return{sprintf:t,vsprintf:r}})}("undefined"==typeof window?this:window)
+var s=[{name:"google",regexp:/^www.google/,query:"q"},{name:"yandex",regexp:/yandex.(ua|ru|kz|by|com|tr)$/,query:"text"},{name:"go.mail.ru",regexp:/^go.mail.ru$/,query:"q"},{name:"bing",regexp:/^www.bing/,query:"q"},{name:"yahoo",regexp:/^search.yahoo/,query:"p"},{name:"ask",regexp:/ask.com$/,query:"q"},{name:"rambler",regexp:/rambler.ru$/,query:"query"},{name:"ukr.net",regexp:/^search.ukr.net$/,query:"search_query"},{name:"ukr.net",regexp:/^search.ukr.net$/,query:"search_query"},{name:"meta.ua",regexp:/^search.meta.ua$/,query:"q"},{name:"i.ua",regexp:/^search.i.ua$/,query:"q"},{name:"all.by",regexp:/^all.by$/,query:"query"},{name:"search.tut.by",regexp:/^search.tut.by$/,query:"query"}],o=t.BinotelCallTracking
+console.log("Binotel Call Tracking in processing!!! Widget initiator is %s",o.widgetId)
+var l
+setTimeout(function(){l=new c,l.init(),o.sendCallTrackingRequest=l.sendCallTrackingRequest},100)
+var c=function(){var n={helpers:{},cookies:t.bgcCookies.noConflict(),phoneNumbers:{displayed:"original",original:{},callTracking:{}},statisticsData:{sentCallTrackingRequestTimeLast:0,sentCallTrackingRequestCounter:0},dynamicData:{initializedVisibilityFunctions:!1,intervalOfSendCallTrackingRequest:null,timerOfRestoreOriginalPhoneNumbers:null,timerOfRunVisibleState:null}}
+return this.init=function(){n.helpers.init(),setInterval(function(){},18e5)},this.sendCallTrackingRequest=function(){n.helpers.sendCallTrackingRequest()},n.helpers.init=function(){o.debugMode&&console.log("[%s] %s",Date(),"Run self.helpers.init"),n.sessionData=n.cookies.getJSON("binct-session-data"),n.sessionData||(n.sessionData={sessionTimeFirst:Math.floor(Date.now()/1e3),campaignCount:0}),n.sessionData.location=t.location.href,n.sessionData.language=(t.navigator.languages?t.navigator.languages[0]:t.navigator.language||t.navigator.browserLanguage||t.navigator.userLanguage).toLowerCase(),n.sessionData.encoding=(e.characterSet||e.charset).toLowerCase(),n.sessionData.screenResolution=t.screen.width+"x"+t.screen.height,n.sessionData.sessionTimeCurrent=Math.floor(Date.now()/1e3)
+var a=n.helpers.parseQueryString(t.location.search),i=n.helpers.parseReferrer(e.referrer),r=n.helpers.parseQueryString(i.search)
+if(a.gclid&&!a.utm_source)n.sessionData.utmData={},n.sessionData.utmData.utm_source="google",n.sessionData.utmData.utm_medium="cpc",n.sessionData.utmData.utm_campaign="(not set)",n.sessionData.utmData.utm_content="(not set)",n.sessionData.utmData.utm_term="(not set)",n.sessionData.campaignTime=Math.floor(Date.now()/1e3),n.sessionData.campaignCount++
+else if(a.utm_source)n.sessionData.utmData={},n.sessionData.utmData.utm_source=a.utm_source,n.sessionData.utmData.utm_medium=a.utm_medium||"(not set)",n.sessionData.utmData.utm_campaign=a.utm_campaign||"(not set)",n.sessionData.utmData.utm_content=a.utm_content||"(not set)",n.sessionData.utmData.utm_term=a.utm_term||"(not set)",n.sessionData.campaignTime=Math.floor(Date.now()/1e3),n.sessionData.campaignCount++
+else if(i.hostname&&i.hostname!==t.location.hostname){n.sessionData.utmData=void 0
+for(var l=0;l<s.length;l++)if(s[l].regexp.test(i.hostname)){n.sessionData.utmData={},n.sessionData.utmData.utm_source=s[l].name,n.sessionData.utmData.utm_medium="organic",n.sessionData.utmData.utm_campaign="(not set)",n.sessionData.utmData.utm_content="(not set)",n.sessionData.utmData.utm_term="https:"===i.protocol?"(not provided)":r[s[l].query]||"(not set)",n.sessionData.campaignTime=Math.floor(Date.now()/1e3),n.sessionData.campaignCount++
+break}!n.sessionData.utmData,n.sessionData.utmData||(n.sessionData.utmData={},n.sessionData.utmData.utm_source=i.hostname,n.sessionData.utmData.utm_medium="referral",n.sessionData.utmData.utm_campaign="(referral)",n.sessionData.utmData.utm_content=i.pathname,n.sessionData.utmData.utm_term="(not set)",n.sessionData.campaignTime=Math.floor(Date.now()/1e3),n.sessionData.campaignCount++)}else n.sessionData.utmData||(n.sessionData.utmData={},n.sessionData.utmData.utm_source="(direct)",n.sessionData.utmData.utm_medium="(none)",n.sessionData.utmData.utm_campaign="(direct)",n.sessionData.utmData.utm_content="(not set)",n.sessionData.utmData.utm_term="(not set)",n.sessionData.campaignTime=Math.floor(Date.now()/1e3),n.sessionData.campaignCount++)
+n.cookies.set("binct-session-data",n.sessionData,{expires:730,domain:o.cookieDomain||""}),o.type.indexOf("dynamic")>-1?n.helpers.initializeDynamicCallTracking():bgcVisibility.onVisible(function(){n.helpers.sendCallTrackingRequest()})},n.helpers.initializeDynamicCallTracking=function(e){return o.debugMode&&console.log("[%s] %s",Date(),"Run self.helpers.initializeDynamicCallTracking"),e=e||0,e>=40?(o.debugMode&&console.log("[%s] %s",Date(),"Can't find GA"),!1):void("undefined"==typeof ga||"function"!=typeof ga?setTimeout(function(){n.helpers.initializeDynamicCallTracking(++e)},20>e?250:1e3):ga(function(){n.sessionData.gaTrackingId=ga.getAll()[o.gaTrackerIndex].get("trackingId"),n.sessionData.gaClientId=ga.getAll()[o.gaTrackerIndex].get("clientId"),bgcVisibility.onVisible(function(){n.helpers.sendCallTrackingRequest()})}))},n.helpers.sendCallTrackingRequest=function(){n.statisticsData.sentCallTrackingRequestTimeLast=Math.floor(Date.now()/1e3),n.statisticsData.sentCallTrackingRequestCounter++,o.debugMode&&console.log("[%s] %s",Date(),"Run self.helpers.sendCallTrackingRequest"),a({type:"POST",url:o.backendHost+"/calltracking/getSlot/",data:{widgetID:o.widgetId,sessionData:JSON.parse(JSON.stringify(n.sessionData))},dataType:"json"},function(t){if(t&&"success"===t.status&&t.callTracking){if(o.type.indexOf("dynamic")>-1&&o.dynamicInactivityTime&&(clearTimeout(n.dynamicData.timerOfRestoreOriginalPhoneNumbers),n.dynamicData.timerOfRestoreOriginalPhoneNumbers=setTimeout(function(){n.helpers.restoreOriginalPhoneNumbers()},1e3*o.dynamicInactivityTime)),"original"===n.phoneNumbers.displayed){n.phoneNumbers.callTracking=t.callTracking
+for(var a=1;6>=a;a++)for(var i=e.getElementsByClassName("binct-phone-number-"+a),r=0;r<i.length;r++)n.phoneNumbers.original["phoneNumber"+a+"InHtml"]||(n.phoneNumbers.original["phoneNumber"+a+"InHtml"]=i[r].innerHTML),t.callTracking["phoneNumber"+a+"InHtml"]&&(n.phoneNumbers.displayed="callTracking",i[r].innerHTML=t.callTracking["phoneNumber"+a+"InHtml"],"a"===i[r].tagName.toLowerCase()&&/tel:/.test(i[r].getAttribute("href"))&&i[r].setAttribute("href","tel:"+i[r].textContent.toString().replace(/\D/g,"")))}else if(JSON.stringify(t.callTracking)!==JSON.stringify(n.phoneNumbers.callTracking)){for(var s=!0,a=1;6>=a;a++){var i=e.getElementsByClassName("binct-phone-number-"+a)
+if(i.length)for(var r=0;r<i.length;r++)t.callTracking["phoneNumber"+a+"InHtml"]?(s=!1,i[r].innerHTML=t.callTracking["phoneNumber"+a+"InHtml"],"a"===i[r].tagName.toLowerCase()&&/tel:/.test(i[r].getAttribute("href"))&&i[r].setAttribute("href","tel:"+i[r].textContent.toString().replace(/\D/g,""))):n.phoneNumbers.original["phoneNumber"+a+"InHtml"]&&(i[r].innerHTML=n.phoneNumbers.original["phoneNumber"+a+"InHtml"],"a"===i[r].tagName.toLowerCase()&&/tel:/.test(i[r].getAttribute("href"))&&i[r].setAttribute("href","#"))}s?n.phoneNumbers.displayed="original":n.phoneNumbers.callTracking=t.callTracking}n.dynamicData.initializedVisibilityFunctions||(n.dynamicData.initializedVisibilityFunctions=!0,o.type.indexOf("dynamic")>-1&&o.dynamicKeepAliveTime&&(n.dynamicData.intervalOfSendCallTrackingRequest=setInterval(function(){n.helpers.sendCallTrackingRequest()},1e3*o.dynamicKeepAliveTime),bgcVisibility.isSupported()&&bgcVisibility.change(function(e,t){if("visible"===t){clearTimeout(n.dynamicData.timerOfRunVisibleState)
+var a=Math.floor(Date.now()/1e3)-n.statisticsData.sentCallTrackingRequestTimeLast
+a+5>o.dynamicKeepAliveTime?(n.helpers.sendCallTrackingRequest(),clearInterval(n.dynamicData.intervalOfSendCallTrackingRequest),n.dynamicData.intervalOfSendCallTrackingRequest=setInterval(function(){n.helpers.sendCallTrackingRequest()},1e3*o.dynamicKeepAliveTime)):n.dynamicData.timerOfRunVisibleState=setTimeout(function(){n.helpers.sendCallTrackingRequest(),clearInterval(n.dynamicData.intervalOfSendCallTrackingRequest),n.dynamicData.intervalOfSendCallTrackingRequest=setInterval(function(){n.helpers.sendCallTrackingRequest()},1e3*o.dynamicKeepAliveTime)},1e3*(o.dynamicKeepAliveTime-a-5))}else"hidden"===t&&(clearTimeout(n.dynamicData.timerOfRunVisibleState),clearInterval(n.dynamicData.intervalOfSendCallTrackingRequest))})))}else n.helpers.restoreOriginalPhoneNumbers()},function(e,t){console.log(t,e)})},n.helpers.restoreOriginalPhoneNumbers=function(){if(o.debugMode&&console.log("[%s] %s",Date(),"Run self.helpers.restoreOriginalPhoneNumbers"),"original"!==n.phoneNumbers.displayed){n.phoneNumbers.displayed="original"
+for(var t in n.phoneNumbers.original){var a=0
+"phoneNumber1InHtml"===t?a=1:"phoneNumber2InHtml"===t?a=2:"phoneNumber3InHtml"===t?a=3:"phoneNumber4InHtml"===t?a=4:"phoneNumber5InHtml"===t?a=5:"phoneNumber6InHtml"===t&&(a=6)
+var i=e.getElementsByClassName("binct-phone-number-"+a)
+if(i.length)for(var r=0;r<i.length;r++)n.phoneNumbers.original[t]&&n.phoneNumbers.original[t]!==i[r].innerHTML&&(i[r].innerHTML=n.phoneNumbers.original[t],"a"===i[r].tagName.toLowerCase()&&/tel:/.test(i[r].getAttribute("href"))&&i[r].setAttribute("href","#"))}}},n.helpers.parseQueryString=function(e){for(var t,n=/[?&]([^=#&]+)=([^&#]*)/g,a={};t=n.exec(e);)try{a[decodeURIComponent(t[1])]=decodeURIComponent(t[2])}catch(i){}return a},n.helpers.parseReferrer=function(e){var t={hash:"",host:"",hostname:"",href:"",origin:"",pathname:"",port:"",protocol:"",search:""}
+if(""!==e){var n=document.createElement("a")
+n.href=e,t.hash=n.hash,t.host=n.host,t.hostname=n.hostname,t.href=n.href,t.origin=n.origin,t.pathname=n.pathname,t.port=n.port,t.protocol=n.protocol,t.search=n.search}return t},n.helpers.setClientSideTimeOffset=function(e){a({type:"GET",url:o.backendHost+"/getcall/getTimestamp/",dataType:"json"},function(t){t&&t.timestamp?o.clientSideTimeOffset=t.timestamp-Math.floor(Date.now()/1e3):e!==!0&&setTimeout(function(){n.helpers.setClientSideTimeOffset(!0)},12e4)},function(t,a){console.log(a,t),e!==!0&&setTimeout(function(){n.helpers.setClientSideTimeOffset(!0)},12e4)})},this}
+Date.now||(Date.now=function(){return(new Date).getTime()}),function(e){var t={},n={},a=n.toString,r=/%20/g,s=/\[\]$/
+e.binotelJqMini=t,t.type=function(e){return null==e?e+"":"object"==typeof e||"function"==typeof e?n[a.call(e)]||"object":typeof e},t.isFunction=function(e){return"function"===t.type(e)},t.buildParams=function(e,n,a){var r,o,l
+if(Array.isArray(n))for(var o in n)l=n[o],s.test(e)?a(e,l):t.buildParams(e+"["+("object"==typeof v?i:"")+"]",l,a)
+else if("object"===t.type(n))for(r in n)t.buildParams(e+"["+r+"]",n[r],a)
+else a(e,n)},t.param=function(e){var n,a,i
+if(serialized=[],add=function(e,n){n=t.isFunction(n)?n():null==n?"":n,serialized[serialized.length]=encodeURIComponent(e)+"="+encodeURIComponent(n)},Array.isArray(e))for(a in e)i=e[a],add(a,i)
+else for(n in e)t.buildParams(n,e[n],add)
+return serialized.join("&").replace(r,"+")}}(window)}(document,window,"script")

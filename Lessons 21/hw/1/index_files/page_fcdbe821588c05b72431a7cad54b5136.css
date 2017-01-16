@@ -1,0 +1,19 @@
+
+
+/* Start:/local/templates/pizzaodua/components/xsite/pizza.custom/site/style.css?1472361301299*/
+.composition-img img { max-height:41px; } 
+.pizza-reset { margin-left:20px; }
+.sauce-base0:after {
+	content: "▼";
+	vertical-align: top;
+	top: 12px;
+	position: relative;	
+}
+.sauce-base-select {
+	width:85px;
+	font-size:11px;
+	font-style:italic;
+}
+.addit-item img { max-width:78px; max-height:52px; }
+/* End */
+/* /local/templates/pizzaodua/components/xsite/pizza.custom/site/style.css?1472361301299 */

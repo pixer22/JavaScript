@@ -1,0 +1,58 @@
+
+; /* Start:"a:4:{s:4:"full";s:86:"/local/templates/pizzaodua/components/xsite/pizza.custom/site/script.js?14723613011255";s:6:"source";s:71:"/local/templates/pizzaodua/components/xsite/pizza.custom/site/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+var size;
+function syncData() {
+	$(".js-cake").each(function(i,el){
+		if($(el).prop("checked")==true) size = $(el).val();
+	});
+	$(".js-cnstr-cl input").each(function(i,el){
+		price = $(el).data(size);
+		weight= $(el).data("w-"+size);
+		$(el).siblings(".js-cnstr-addit").find(".js-cnstr-itmprice").find(".addit-item-weight").find(".val").text(weight);
+		$(el).siblings(".js-cnstr-addit").find(".js-cnstr-itmprice").find(".addit-item-price").find(".val").text(price);
+	});
+} 
+
+function syncPrice() {
+	var total = 0;
+	var totalWeight = 0;
+	$(".js-composition-item").each(function(i,el){
+		id = "#"+$(el).data('cid');
+		price = $(id).siblings("input").data(size);
+		weight = $(id).siblings("input").data("w-"+size);
+		qty = $(el).data("count");
+		total = total + price*qty;
+		totalWeight = totalWeight + weight*qty;
+	});
+	console.log(totalWeight);
+}
+
+
+$(function(){
+	syncData();
+	$(document).on({
+		click: syncData
+	},".js-cake");
+
+
+	$(document).on({
+		submit: function(){
+			url = $(this).attr('action');
+			data = $(this).serialize();
+			$.post(url,data,function(data){
+				$(".js-basket-wrap").html(data);
+				$(".js-toggle-wrap").slideDown();
+				setTimeout('$(".js-toggle-wrap").slideUp()', 4000)
+			});
+			return false;		
+		}
+	},".js-custom");
+});
+
+
+
+
+
+
+/* End */
+;; /* /local/templates/pizzaodua/components/xsite/pizza.custom/site/script.js?14723613011255*/
