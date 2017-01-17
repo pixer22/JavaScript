@@ -1,0 +1,339 @@
+a { /* решение бага с появляющимся синим бордером */
+    outline: none;
+}
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.div-before-footer h1{
+    font-size: 50pt;
+}
+.numberimg {
+    width: 15px;
+    height: 20px;
+}
+
+.twoCrap {
+    width: auto;
+    height: 20px;
+}
+
+.hidden.menu {
+    display: none;
+}
+
+.masthead.segment {
+    min-height: 700px;
+    padding: 1em 0;
+}
+
+.masthead .logo.item img {
+    margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.masthead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.ui.vertical.stripe {
+    padding: 8em 0;
+}
+
+.ui.vertical.stripe h3 {
+    font-size: 2em;
+}
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+    margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+    clear: both;
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0;
+}
+
+.quote.stripe.segment {
+    padding: 0;
+}
+
+.quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.footer.segment {
+    padding: 5em 0;
+}
+
+.secondary.pointing.menu .toc.item {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .ui.fixed.menu {
+        display: none !important;
+    }
+
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+        display: none;
+    }
+
+    .secondary.pointing.menu .toc.item {
+        display: block;
+    }
+
+    .masthead.segment {
+        min-height: 350px;
+    }
+
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+}
+
+/* CSS СЛАЙДЕРА*/
+
+.slider-wrap, #slider, .child_img {
+    height: 600px;
+}
+
+.slider-wrap, .child_img, .item-slider, #btn-speed-div {
+    width: 800px;
+}
+
+.slider-wrap {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: solid 3px #1678c2;
+    border-radius: 3px;
+}
+
+#slider {
+    position: absolute;
+    width: 4200px;
+    left: 0;
+    transition: left 0.5s;
+}
+
+.child_img {
+    margin: 0;
+    float: left;
+    display: inline-block;
+}
+
+#btn-slider-stop, #btn-slider-start {
+    display: inline-block;
+    float: right;
+    margin-left: 10px;
+}
+
+.item-slider {
+    margin-top: 5px;
+}
+
+#btn-speed-div {
+    margin-bottom: 20px;
+}
+
+#btn-slider-speed {
+    width: 400px;
+}
+.control-panel h3{
+    text-align: left;
+}
+/*CSS СЛАЙДЕРА КОНЕЦ */
+
+/*css калькулятор*/
+
+.calcDiv {
+    border: 1px solid black;
+}
+
+#calc {
+    padding: 0;
+    margin-left: 350px;
+    width: 400px;
+    height: 360px;
+}
+
+#result {
+    width: 400px;
+    height: 80px;
+    background-color: #e0e1e2;
+}
+
+#knopki {
+    float: left;
+    width: 400px;
+    height: 280px;
+    background-color: rgba(39, 39, 39, 0.89);
+}
+
+.culcButton {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 5px 5px;
+    font-size: 2rem;
+!important
+}
+
+#numbers {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 220px;
+}
+
+#operations {
+    margin-top: 20px;
+    display: inline-block;
+    width: 150px;
+    float: right;
+}
+
+#strRes {
+    margin-left: 350px;
+    padding: 0;
+}
+
+#textInCulc {
+    margin-top: 30px;
+    font-size: 2rem;
+    display: block;
+}
+
+/*css калькулятора конец*/
+
+#clock {
+    margin: 0 auto;
+    max-width: 170px;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#up-button {
+    background: dimgrey !important;
+    position: fixed;
+    opacity: 0.9;
+    padding: 15px 10px 10px;
+    right: 10px;
+    bottom: 10px;
+    visibility: hidden;
+}
+
+#read-stop-button {
+    z-index: 20;
+    background: black !important;
+    position: fixed;
+    padding: 15px 10px 10px;
+    right: 100px;
+    bottom: 10px;
+    visibility: hidden;
+}
+
+#read-stop-button:hover {
+    color: white !important;
+    opacity: 0.9;
+}
+
+#articles {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.articles {
+    margin-top: 10px;
+}
+
+#main-menu, #date-now, #log-out {
+    margin: auto 0;
+}
+
+#avatar {
+    margin-right: 10px;
+}
+
+.status-online {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEGSURBVHjajJA9aoVAEMdHd5GHimhlsXiAgDdI8ZpXbZH+gfdIlRTJDZIrPAjkAJ4kVRQsxEIbLfzADyQzwyssM/Bn+c/8dmYY4/J9gXtcUQlK332KuqG+yMht2+h9833/JYoiUEoxVVWVLstSd133gPZVqCd19TzvI45jQBj2fWc5jsO+bdvzOI6/clmWJAxDEELAPM9wDMpRrWmaRGJR4w/Isoy7uK7LUN/3MAwDGIZBDTSBQCCO4PcYtm1DEAQ8icB0XVdN+1iWxftRmKbJINYITE3c8VYUBUgpefmjKEc1YsTp8fQzTZPAM5ypC16Au9V1DXmeA+bfccqnETwH/zr4nwADAJ/LgXQQOhtNAAAAAElFTkSuQmCC);
+}
+
+.status-offline {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAA+VBMVEX////yra2hAwPgQEDulZV8AgLEBATKBASAAgLxp6exAwPZFRV8AgLwo6PlYGCZAwPpeXl/AgLUBASPAwO9BATtkpLpe3uQAwOHAwPkV1fdLCyuAwOeAwOqAwOAAgLulZXwo6PABATSBATdMTGFAgKHAwOMAwOQAwOUAwOVAwOaAwOcAwOfAwOjAwOkAwOmAwOpAwOuAwOxAwOyAwO1AwO5AwO8BATABATEBATFBATMBATQBATSBATXCwvXDAzZFhbZGBjaHR3cJyfeNTXfODjfPDziS0viUFDjU1PkWFjmZWXnbm7ocHDocXHpeHjrhITsiIjtkJDumZkhvkGNAAAAJXRSTlMAHiEkJCcqMDZLVFdggYSTk5aWpaW0t8bJyczY2/P29vb5+fn8DKuNogAAAHJJREFUCJljYGBg5BUV42NmAAJOhaAAb3dlbgYGFvlAfx9PFwcldgYBP18vd2d7awsRBkkPN1cnWytzE2kGKSdHO2tLU0M9GQYhGysLMyN9bQ1hBjZFU2MDHU01FQ4GBi5ZXS11VTkekMFM/OISgqwMDABa+w630UqtYQAAAABJRU5ErkJggg==);
+}
+
+#dynamic-title {
+    color: #2185D0;
+}
+
+.photo {
+    margin: 0 auto;
+    display: block;
+    max-width: 58px;
+}
+
+.photo-h4 {
+    text-align: center;
+}
+
+.read-mode-div {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#readMode-button {
+    margin-left: 15px;
+}
+
+.h2-div-news {
+    margin-top: 100px;
+}
+
+#read-error {
+    color: red;
+}

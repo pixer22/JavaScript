@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/components/accordion.min.css">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js"></script>-->
+    <link href="./style.css" rel="stylesheet">
+</head>
+<header>
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="active item">Home</a>
+            <a class="item">Work</a>
+            <a class="item">Company</a>
+            <a class="item">Careers</a>
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Log in</a>
+                </div>
+                <div class="item">
+                    <a class="ui primary button">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+        <a class="item">Login</a>
+        <a class="item">Signup</a>
+    </div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <div id ="main-menu" class="ui large secondary inverted pointing menu">
+                    <a id="main-template" href="#main-template" class="active item item-menu">Главная страница</a>
+                    <a id="calc-template" href="#calc-template" class="item item-menu">Калькулятор</a>
+                    <a id="geometry-template" href="#geometry-template" class="item item-menu">Статья</a>
+                    <a id="articles-template" href="#articles-template" class="item item-menu">Новости</a>
+                        <a id="contacts" href="#about-me" class="item item-menu">Контакты</a>
+                    </div>
+                    <div class="right item">
+                        <div class="ui simple dropdown item">
+                            <div ><img id ="avatar" class="ui avatar image" src="./img/avatar-img.jpg"><span id="hello-name"></span></div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div id= "user-fio" class="item"></div>
+                                <div id="user-name" class="item"></div>
+                                <div id="user-age" class="item"></div>
+                                <div id="user-status" class="item"></div>
+                                <div id="lastLogin" class="item"></div>
+                            </div>
+                        </div>
+                </div>
+                    <div id="log-out" class="ui small right button inverted">Log Out</div>
+                    <div id="date-now" class="right item">
+
+                    </div>
+                    <!--<a id="button-hello" href="login.html" class="ui inverted button"></a>-->
+                    <!--
+        <a href="./login.html" class="ui inverted button">Log in</a>
+        <a href="./registration.html"class="ui inverted button">Sign Up</a>
+-->
+                </div>
+            </div>
+            <div class="ui text container">
+                <h1 id ="dynamic-title" class="ui inverted header">
+                </h1>
+                <h2>Текущее время</h2>
+                <div id="clock" class="ui huge inverted center"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body id="body">
+    <!-- Following Menu -->
+    <div id="dynamic-html" class="ui vertical stripe segment">
+
+    </div>
+    <div class="ui vertical stripe quote segment div-before-footer">
+        <div class="ui equal width stackable internally celled grid">
+            <div class="center aligned row">
+                <div class="column">
+                    <h1>Quote of the month: </h1>
+                </div>
+                <div class="column">
+                    <h3>"If you know how to do something well, do not do it for free."</h3>
+                    <p>
+                        <img src="img/joker.png" class="ui avatar image"> <span><b>The Joker</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="site-footer" class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">About Developer</h4>
+                    <p><b>Created by: </b> Khvostov Aleksandr</p>
+                    <p><b>Email: </b> xemylian@gmail.com</p>
+                    <p><b>Phone: </b> +380939834778</p>
+                    <a name="about-me"></a>
+                </div>
+                <div class="two wide column">
+                    <div class="ui inverted link list">
+                    <h4 class="photo-h4 ui inverted header">Photo</h4>
+                        <img class="photo" src="./img/photo-developer.jpg" alt="developer-photo">
+                    </div>
+                </div>
+                <div class="one wide column">
+                </div>
+                <div class="wide right">
+                    <a id="up-button" class="ui button">UP^</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="md5" src="md5.js"></script>
+    <script src="index.js"></script>
+    <script src="templates/clock-template.js"></script>
+    <!--<script id="calcScript" src="./templates/calc-template.js"></script>-->
+    <!--<script id="sliderScript" src="main-template.js"></script>-->
+</body>
+
+</html>
