@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<% include partials/header %>
+	<% include partials/sidebar %>
+
+	<% if (page == 'main') {%>
+		<% include pages/index %>
+	<%}%>
+
+	<% if (page == 'about') { %>
+		<% include pages/about %>
+	<%}%>
+	
+	<% if (page == 'profile') { %>
+		<% include pages/profile %>
+	<%}%>
+
+
+	<% include partials/footer %>
+</body>
+</html>

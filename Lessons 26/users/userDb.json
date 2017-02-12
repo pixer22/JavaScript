@@ -1,0 +1,24 @@
+[
+	{
+		"_id" : 123,
+		"fname" : "john",
+		"lname" : "jackson",
+		"email" : "jack@gmail.com",
+		"passwd" : "12345",
+	},
+	{
+		"_id" : 124,
+		"fname" : "jack",
+		"lname" : "jacksin",
+		"email" : "jacksin@gmail.com",
+		"passwd" : "123456",
+	},
+	{
+		"_id" : 125,
+		"fname" : "daniel",
+		"lname" : "Ivan",
+		"email" : "ivan@gmail.com",
+		"passwd" : "1234567",
+	}
+
+]

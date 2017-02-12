@@ -1,0 +1,6 @@
+запуск монго
+mongod --dbpath "c:\database"
+
+Mongoose
+http://mongoosejs.com/docs/
+npm install mongoose
