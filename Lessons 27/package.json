@@ -1,0 +1,16 @@
+{
+  "name": "node20",
+  "version": "1.0.0",
+  "description": "Занятие 30 01.02.2017 Ср\r npm \r \tinit\r \tinstall\r \ti --save\r express\r supervisor server.js - удобная штука, перезапускает сервер при изменениях в файлах",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.2"
+  }
+}

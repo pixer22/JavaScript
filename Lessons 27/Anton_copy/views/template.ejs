@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Шаблон</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+
+
+
+	<% include partials/header %>
+
+	<% include partials/sidebar %>
+
+	<h1>Content</h1>
+
+	<% if (page == "main") { %>
+		<% include pages/index %>
+	<% } %>
+
+	<% if (page == "about") { %>
+		<% include pages/about %>
+	<% } %>
+
+	<% if (page == "profile") { %>
+		<% include pages/profile %>
+	<% } %>
+
+	<% if (page == "404") { %>
+		<% include pages/404 %>
+	<% } %>
+
+	<% if (page == "500") { %>
+		<% include pages/500 %>
+	<% } %>
+
+	<% include partials/footer %>
+
+</body>
+</html>

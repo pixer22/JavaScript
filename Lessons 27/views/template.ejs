@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Шаблон</title>
+</head>
+<body>
+	<% include partials/header %>
+
+	<% include partials/sidebar %>
+
+	<h1>Контент</h1>
+
+	<% if (page == "main") { %>
+		<% include main %>
+	<% } %>
+
+	<% if (page == "about") { %>
+		<% include about %>
+	<% } %>
+
+	<% include partials/footer %>
+
+</body>
+</html>
