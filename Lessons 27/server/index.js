@@ -1,54 +1,50 @@
-// запускать это всё дело можно supervisor server
-var express = require('express');
+var express  = require('express');
+var app      = express();
+var http = require('http').Server(app);
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash    = require('connect-flash');
+var router = require('./router.js');
 
-var app = express();
+var morgan       = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
+var io = require('socket.io')(http);
+var configDB = require('../node/../config/database.js');
 
-app.set('view engine', 'ejs'); // 
+// configuration ===============================================================
+mongoose.connect(configDB.url); // connect to our database
 
-app.get('/', function(req, res) {
-	res
-		.render("template", {
-			page:"main",
-			aniss: "sdfasd"
-		})
-})
+// require('./config/passport')(passport); // pass passport for configuration
 
-app.get('/about', function(req, res) {
-	res
-		.render("template", {
-			page:"about"
-		})
-})
+// set up our express application
+app.use(morgan('dev')); // log every request to the console
+app.use(cookieParser()); // read cookies (needed for auth)
+//app.use(bodyParser()); // get information from html forms
+//app.use(bodyParser.urlencoded();
+	app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/profile', function(req, res) {
-	res
-		.type('text/html')
-		.send('<h1>Profile</h1>');
-})
+// required for passport
+//app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(session({secret: '<mysecret>', 
+                 saveUninitialized: true,
+                 resave: true}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
-app.get('/game', function(req, res) {
-	res
-		.type('text/html')
-		.send('<h1>Game</h1>');
-})
+// routes ====================================================================== // load our routes and pass in our app and fully configured passport
 
-// 404
-app.use(function(req, res) {
-	res
-		.status(404)
-		.render("template", {
-			page:"404"
-		})
-		
-})
+// launch ======================================================================
 
-// 505
-app.use(function(err, req, res, next) {
-	res.type('text/html');
-	res.status(500);
-	res.send('<h1>500 - Server error</h1>');
-})
+require('./pasport')(passport);
 
-app.listen(3000, function() {
-	console.log('listening on localhost:3000')
-})
+function server(config) {
+    http.listen(config.get('port'), function () {
+        console.log('The magic happens on port ' + config.get('port'));
+    });
+    router(app, express, passport,io,session);
+}
+
+module.exports = server;
