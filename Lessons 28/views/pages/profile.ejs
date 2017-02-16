@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="wrappPersonBlock clearfix">
+            <div class="col-lg-4">
+                <div class="cardPersonImg">
+                    <img src="img/player.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 personButtonsAvatars">
+                
+                <div class="adetiorsBut">
+                    <input type="file" class="butFileALl">
+                    <button class="addedAvatars">Сменить аватарку</button>
+                </div>
+            </div>
+            <div class="col-lg-4 personInfo">
+                <form id="formProfile" method="POST">
+                    <div class="node-server-profile">
+                        <h3 class="personName">Ф.И.О.</h3>
+                        <input type="text" value="<%= user.local.fio %>"  class="inputRead" name="fio">
+                        <h3 class="personName profile-fio"><%= user.local.fio %></h3>
+                    </div>
+                    <div class="node-server-profile">
+                        <h3 class="personName">Logo</h3>
+                        <input type="text" value="<%= user.local.nick %>"  class="inputRead" name="nick">
+                        <h3 class="personName profile-nick"><%= user.local.nick %></h3>
+                    </div>
+                    
+                    <div class="node-server-profile">
+                        <h3 class="personName">E-mail</h3>
+                        <input type="email" name="email" value="<%= user.local.email %>" class="inputRead">
+                        <h3 class="personName profile-email"><%= user.local.email %></h3>
+                    </div>
+                    <div class="node-server-profile">
+                        <h3 class="personName">Телефон</h3>
+                        <input type="text" value="<%= user.local.tel %>"  class="inputRead" name="tel" >
+                        <h3 class="personNam profile-tel"><%= user.local.tel %></h3>
+                    </div>
+                    <div class="clearfix"></div>
+                    <button type="submit" class="btn-style profile-button read-profile-button">Редактировать</button>
+                    <input type="submit" class="btn-style profile-button post-read-profile">
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

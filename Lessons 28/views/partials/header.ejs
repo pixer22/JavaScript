@@ -1,0 +1,51 @@
+<header class="headerAll">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <div class="col-lg-3 logo">
+                        <h1>
+                            <a href="/" class="logoLink">
+                                <span class="bigRed"></span>
+                                <span></span>
+                                <span class="bigRed"></span>
+                                <span></span>
+                                <span class="bigRed"></span>
+                                <span></span>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-5 registration">
+                    <%if ( page == "main") {%>
+                    <%include logIn%>
+                    <%} else {%>
+                        <%include logOut%>
+                    <%}%>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="navHeaderAll">
+            <div class="container">
+                <ul class="navs">
+                    <li class="activeLink">
+                        <a href="/" class="stoped-prevent">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/profile">Личный кабинет</a>
+                    </li>
+                    <li>
+                        <a href="/games">Игра</a>
+                    </li>
+                     <li>
+                        <a href="/stat">Статистика</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
