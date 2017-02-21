@@ -1,0 +1,431 @@
+/* line 1, ../sass/style.scss */
+body,
+html {
+  background: #EDEDED;
+  padding-bottom: 125px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 9, ../sass/style.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 13, ../sass/style.scss */
+.headerAll {
+  background: #ddd;
+  border-bottom: 5px solid #3572b0;
+}
+/* line 20, ../sass/style.scss */
+.headerAll .header .logo h1 .logoLink {
+  text-decoration: none !important;
+  color: #000;
+}
+/* line 24, ../sass/style.scss */
+.headerAll .header .logo h1 .logoLink .bigRed {
+  color: #f00;
+}
+/* line 32, ../sass/style.scss */
+.headerAll .header .formLogin .login {
+  background: #3572b0;
+  color: #fff;
+  display: block;
+  border: 2px solid #3572b0;
+  border-radius: 3px;
+  margin: 6px auto;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none !important;
+  transition: all .3s;
+}
+/* line 46, ../sass/style.scss */
+.headerAll .header .formLogin .login:hover {
+  text-shadow: 0 0 6px white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 54, ../sass/style.scss */
+.headerAll .header .formLogin .registration {
+  background: #3572b0;
+  color: #fff;
+  display: block;
+  border: 2px solid #3572b0;
+  border-radius: 3px;
+  margin: 6px auto;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none !important;
+  transition: all .3s;
+}
+/* line 68, ../sass/style.scss */
+.headerAll .header .formLogin .registration:hover {
+  text-shadow: 0 0 6px white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 82, ../sass/style.scss */
+.headerAll .header .statistics .numberPlayers i,
+.headerAll .header .statistics .numberPlayersIn i,
+.headerAll .header .statistics .numberRooms i,
+.headerAll .header .statistics .numberGamesOut i {
+  font-size: 24px;
+}
+/* line 86, ../sass/style.scss */
+.headerAll .header .statistics .numberPlayers .numberPlayersText,
+.headerAll .header .statistics .numberPlayersIn .numberPlayersText,
+.headerAll .header .statistics .numberRooms .numberPlayersText,
+.headerAll .header .statistics .numberGamesOut .numberPlayersText {
+  font-size: 24px;
+  margin-left: 20px;
+}
+/* line 94, ../sass/style.scss */
+.headerAll .navHeaderAll {
+  background: #000;
+  border-top: 5px solid #3572b0;
+}
+/* line 98, ../sass/style.scss */
+.headerAll .navHeaderAll .navs {
+  display: flex;
+  margin: 0;
+}
+/* line 102, ../sass/style.scss */
+.headerAll .navHeaderAll .navs li {
+  margin: auto;
+  padding: 10px 0;
+  transition: all .3s;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+/* line 109, ../sass/style.scss */
+.headerAll .navHeaderAll .navs li:hover {
+  background: #ddd;
+  border-left: 4px solid #3572b0;
+  border-right: 4px solid #3572b0;
+}
+/* line 114, ../sass/style.scss */
+.headerAll .navHeaderAll .navs li:hover a {
+  color: #000;
+}
+/* line 119, ../sass/style.scss */
+.headerAll .navHeaderAll .navs li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 46px;
+  transition: all .3s;
+  text-decoration: none !important;
+}
+/* line 127, ../sass/style.scss */
+.headerAll .navHeaderAll .navs li a:hover {
+  text-decoration: none;
+}
+/* line 133, ../sass/style.scss */
+.headerAll .navHeaderAll .navs .activeLink {
+  background: #ddd;
+  border-left: 4px solid #3572b0;
+  border-right: 4px solid #3572b0;
+}
+/* line 138, ../sass/style.scss */
+.headerAll .navHeaderAll .navs .activeLink a {
+  color: #000;
+}
+
+/* line 146, ../sass/style.scss */
+main.mainAllBg {
+  background: url("../img/watermark.jpg") no-repeat center 0;
+  height: 100%;
+  border-bottom: 4px solid #9f9f9f;
+}
+/* line 151, ../sass/style.scss */
+main.mainAllBg .mainAll .mainTopPcBlock {
+  background: url("../img/partypoker-pc.png") no-repeat center;
+  height: 326px;
+  margin-top: 30px;
+}
+/* line 156, ../sass/style.scss */
+main.mainAllBg .mainAll .buttonGamesOn {
+  background: #e8490d;
+  text-decoration: none !important;
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 12px 50px;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom: 3px solid #ff6111;
+  border-right: 3px solid #ff6111;
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 350px;
+  transition: all .3s;
+}
+/* line 173, ../sass/style.scss */
+main.mainAllBg .mainAll .buttonGamesOn:hover {
+  border-color: #ff6111;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 182, ../sass/style.scss */
+main.mainAllBg .mainAll .pokerInfo .pokerInfoTitles {
+  font-size: 32px;
+  text-align: center;
+  padding: 50px 0 30px;
+}
+/* line 188, ../sass/style.scss */
+main.mainAllBg .mainAll .pokerInfo p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #888;
+}
+
+/* line 197, ../sass/style.scss */
+.allFooterBg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  background: url("../img/footer-bg.jpg") no-repeat center;
+  z-index: -100;
+}
+/* line 211, ../sass/style.scss */
+.allFooterBg .allFooter .footerLogo h1 .logoLink {
+  text-decoration: none !important;
+  color: #fff;
+}
+/* line 215, ../sass/style.scss */
+.allFooterBg .allFooter .footerLogo h1 .logoLink .bigRed {
+  color: #f00;
+}
+/* line 222, ../sass/style.scss */
+.allFooterBg .allFooter .footerMenu {
+  margin-top: 25px;
+}
+/* line 226, ../sass/style.scss */
+.allFooterBg .allFooter .footerMenu li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none !important;
+}
+/* line 234, ../sass/style.scss */
+.allFooterBg .allFooter .createdBlock {
+  text-align: center;
+}
+/* line 237, ../sass/style.scss */
+.allFooterBg .allFooter .createdBlock h1 {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* line 249, ../sass/style.scss */
+.pokerAllBlock {
+  background: #000;
+  padding-bottom: 200px;
+}
+/* line 253, ../sass/style.scss */
+.pokerAllBlock .pokerTable {
+  background: url("../img/poker.jpg") no-repeat center;
+  height: 594px;
+  position: relative;
+  width: 792px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 261, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll {
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+}
+/* line 266, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .blockImgPlayers {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+}
+/* line 272, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .blockImgPlayers img {
+  width: 100%;
+  border-radius: 50%;
+}
+/* line 278, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .pointsPlayers {
+  position: absolute;
+  top: 3px;
+  left: 160px;
+  color: #000;
+  font-size: 14px;
+  background: #ddd;
+  width: 52px;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 4px;
+}
+/* line 291, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo {
+  float: left;
+  margin-left: 10px;
+}
+/* line 295, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo .namePlayers {
+  color: #fff;
+}
+/* line 299, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo .manyPlayers {
+  color: #fff;
+}
+/* line 303, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo .plaersCardsOnly {
+  position: relative;
+  width: 100%;
+  height: 68px;
+}
+/* line 308, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo .plaersCardsOnly .firstCardsPlayers {
+  width: 46px;
+  height: 100%;
+  float: left;
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 0;
+}
+/* line 316, ../sass/style.scss */
+.pokerAllBlock .pokerTable .playersBlockAll .playersInfo .plaersCardsOnly .secondCardsPlayers {
+  width: 46px;
+  height: 100%;
+  float: left;
+  margin-left: 3px;
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 0;
+}
+/* line 328, ../sass/style.scss */
+.pokerAllBlock .pokerTable .firstPlayersPosition {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+/* line 334, ../sass/style.scss */
+.pokerAllBlock .pokerTable .secondPlayersPosition {
+  position: absolute;
+  top: 350px;
+  left: 0;
+}
+/* line 340, ../sass/style.scss */
+.pokerAllBlock .pokerTable .thirdPlayersPosition {
+  position: absolute;
+  top: 50px;
+  right: -150px;
+}
+/* line 346, ../sass/style.scss */
+.pokerAllBlock .pokerTable .fourthPlayersPosition {
+  position: absolute;
+  top: 350px;
+  right: -150px;
+}
+/* line 352, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll {
+  position: absolute;
+  top: 190px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 260px;
+  height: 55px;
+}
+/* line 362, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .styleCardsAll {
+  width: 46px;
+  height: 68px;
+  float: left;
+  margin-left: 5px;
+}
+/* line 369, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .firstCards {
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 70px;
+}
+/* line 374, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .secondCards {
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 70px;
+}
+/* line 379, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .thirdCards {
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 70px;
+}
+/* line 384, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .fourthCards {
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 70px;
+}
+/* line 389, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blockCardsAll .fivethCards {
+  background: url("../img/allCards.png") no-repeat;
+  background-position: 0 70px;
+}
+/* line 395, ../sass/style.scss */
+.pokerAllBlock .pokerTable .gameManagementAll {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  right: 0;
+  width: 550px;
+  margin: auto;
+  display: flex;
+}
+/* line 404, ../sass/style.scss */
+.pokerAllBlock .pokerTable .gameManagementAll .buttonManagementStyle {
+  width: 100px;
+  height: 35px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  background: #e8490d;
+  background-color: #ff6111;
+  background-image: -webkit-linear-gradient(top, #fca07f 1px, #ff6111 1px, #eb4a0d 100%);
+  background-image: -moz-linear-gradient(top, #fca07f 1px, #ff6111 1px, #eb4a0d 100%);
+  background-image: -o-linear-gradient(top, #fca07f 1px, #ff6111 1px, #eb4a0d 100%);
+  background-image: -ms-linear-gradient(top, #fca07f 1px, #ff6111 1px, #eb4a0d 100%);
+  background-image: linear-gradient(top, #fca07f 1px, #ff6111 1px, #eb4a0d 100%);
+  border: 1px solid #CE3800;
+  outline: none !important;
+  transition: all .3s;
+  margin: auto;
+  border-radius: 4px;
+}
+/* line 423, ../sass/style.scss */
+.pokerAllBlock .pokerTable .gameManagementAll .buttonManagementStyle:hover {
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+}
+/* line 440, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blendsStyleAll {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f0ad4e;
+  font-size: 10px;
+  text-align: center;
+  top: 70px;
+  left: 15px;
+}
+/* line 452, ../sass/style.scss */
+.pokerAllBlock .pokerTable .blendsBlocBig {
+  background: #f00;
+}

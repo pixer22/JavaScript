@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <style>
+        @import 'css/screen.css';
+        @import 'css/bootstrap.min.css';
+        @import 'css/font-awesome.min.css';
+        @import 'css/style.css';
+    </style>
+</head>
+<body>
+<% include partials/header %>
+<main class="mainAllBg">
+    <% if (page == "main") {%>
+        <% include pages/index %>
+    <%}%>
+    <% if (page == "games") {%>
+        <% include pages/games %>
+    <%}%>
+    <% if (page == "profile") {%>
+        <% include pages/profile %>
+    <%}%>
+    <% if (page == "stat") {%>
+        <% include pages/stat %>
+    <%}%>
+</main>
+<% include partials/footer %>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ValidatorRegistration.js"></script>
+<script src="js/gameConstructor.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
